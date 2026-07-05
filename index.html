@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Al-Fatiha Majestic Study Companion</title>
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <script>
+        tailwind = window.tailwind || {};
         tailwind.config = {
             darkMode: 'class',
             theme: {
@@ -27,6 +27,7 @@
             }
         }
     </script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Smooth scrolling */
         html {
@@ -46,17 +47,126 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #db2777;
         }
+
+        /* Readability fixes for 1920x1080 screens and reliable visible headings */
+        body {
+            --study-scale: 1.12;
+            font-size: 18px;
+            line-height: 1.7;
+            background:
+                radial-gradient(circle at 22% 8%, rgba(190, 24, 93, 0.26), transparent 32rem),
+                radial-gradient(circle at 82% 20%, rgba(126, 34, 206, 0.24), transparent 34rem),
+                radial-gradient(circle at 52% 60%, rgba(219, 39, 119, 0.12), transparent 38rem),
+                linear-gradient(135deg, #17081f 0%, #0f0515 44%, #210b2e 100%);
+            background-attachment: fixed;
+        }
+        body.font-size-normal {
+            --study-scale: 1;
+        }
+        body.font-size-large {
+            --study-scale: 1.12;
+        }
+        body.font-size-xlarge {
+            --study-scale: 1.28;
+        }
+        .cozy-bg-glow {
+            position: fixed;
+            border-radius: 9999px;
+            filter: blur(110px);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .cozy-bg-glow-1 {
+            top: -8rem;
+            left: 10%;
+            width: 34rem;
+            height: 34rem;
+            background: rgba(147, 51, 234, 0.28);
+        }
+        .cozy-bg-glow-2 {
+            top: 15rem;
+            right: 7%;
+            width: 32rem;
+            height: 32rem;
+            background: rgba(219, 39, 119, 0.20);
+        }
+        .cozy-bg-glow-3 {
+            bottom: -10rem;
+            left: 32%;
+            width: 38rem;
+            height: 38rem;
+            background: rgba(88, 28, 135, 0.24);
+        }
+        .safe-gradient-text {
+            color: #fce7f3;
+            background-image: linear-gradient(90deg, #f9a8d4, #d8b4fe);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+        @supports ((-webkit-background-clip: text) or (background-clip: text)) {
+            .safe-gradient-text {
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        .tab-content p,
+        .tab-content li,
+        .tab-content textarea,
+        .tab-content label span {
+            font-size: calc(1rem * var(--study-scale)) !important;
+            line-height: 1.75 !important;
+        }
+        .tab-content h2 {
+            font-size: clamp(calc(1.9rem * var(--study-scale)), 2vw, calc(2.6rem * var(--study-scale))) !important;
+            line-height: 1.2 !important;
+        }
+        .tab-content h3,
+        .tab-content h4 {
+            line-height: 1.3 !important;
+        }
+        .lex-word-btn {
+            font-size: calc(1.1rem * var(--study-scale)) !important;
+            padding: 1rem 1.4rem !important;
+            color: #f5e8ff;
+        }
+        .tab-btn {
+            font-size: calc(1rem * var(--study-scale)) !important;
+            padding: 0.8rem 1rem !important;
+        }
+        .journal-textarea {
+            background: linear-gradient(135deg, rgba(28, 12, 36, 0.96), rgba(55, 18, 69, 0.82)) !important;
+            color: #fce7f3 !important;
+            border: 1px solid rgba(244, 114, 182, 0.28) !important;
+            box-shadow: inset 0 1px 18px rgba(15, 5, 21, 0.55), 0 12px 30px rgba(15, 5, 21, 0.18);
+            caret-color: #f9a8d4;
+        }
+        .journal-textarea::placeholder {
+            color: rgba(216, 180, 254, 0.55) !important;
+        }
+        .journal-textarea:focus {
+            border-color: rgba(244, 114, 182, 0.8) !important;
+            box-shadow: inset 0 1px 18px rgba(15, 5, 21, 0.55), 0 0 0 3px rgba(219, 39, 119, 0.18);
+        }
+        #lexicon-detail-popup:not(.hidden) {
+            display: flex;
+        }
+        @media (min-width: 1024px) {
+            main, header > div {
+                max-width: 86rem !important;
+            }
+        }
+
     </style>
 </head>
-<body id="main-body" class="bg-darkplum-950 text-purple-100 min-h-screen flex flex-col font-sans selection:bg-neonpink-500 selection:text-white text-base md:text-lg transition-all duration-200">
+<body id="main-body" class="bg-darkplum-950 text-purple-100 min-h-screen flex flex-col font-sans selection:bg-neonpink-500 selection:text-white text-lg md:text-xl transition-all duration-200">
 
     <!-- Warm Glowing Background Accents -->
-    <div class="absolute top-0 left-1/4 w-96 h-96 bg-purple-900/20 rounded-full blur-[100px] pointer-events-none"></div>
-    <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-pink-900/10 rounded-full blur-[100px] pointer-events-none"></div>
+    <div class="cozy-bg-glow cozy-bg-glow-1"></div>
+    <div class="cozy-bg-glow cozy-bg-glow-2"></div>
+    <div class="cozy-bg-glow cozy-bg-glow-3"></div>
 
     <!-- Header Navigation -->
     <header class="bg-darkplum-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-purple-950 shadow-md">
-        <div class="max-w-6xl mx-auto px-6 py-5 flex flex-col lg:flex-row items-center justify-between gap-6">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col lg:flex-row items-center justify-between gap-6">
             <div class="flex items-center justify-between w-full lg:w-auto gap-4">
                 <div class="flex items-center space-x-4">
                     <div class="bg-gradient-to-tr from-pink-600 to-purple-600 p-3 rounded-2xl shadow-lg shadow-pink-500/10 text-white">
@@ -65,7 +175,7 @@
                         </svg>
                     </div>
                     <div>
-                        <h1 class="text-xl md:text-2xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-300">OUR SACRED STUDY SANCTUARY</h1>
+                        <h1 class="text-xl md:text-2xl font-black tracking-wider safe-gradient-text font-black">OUR SACRED STUDY SANCTUARY</h1>
                         <p class="text-xs sm:text-sm text-pink-400/80 font-mono tracking-widest uppercase">🧸 Husband & Wife Al-Fatiha Companion 🌸</p>
                     </div>
                 </div>
@@ -104,14 +214,14 @@
     </header>
 
     <!-- Main Content -->
-    <main class="flex-grow max-w-6xl w-full mx-auto p-6 md:py-10 z-10">
+    <main class="flex-grow max-w-7xl w-full mx-auto p-6 md:py-10 z-10">
 
         <!-- TAB 1: INTERACTIVE WORD-BY-WORD LEXICON -->
         <section id="section-lexicon" class="tab-content block space-y-8">
             <div class="bg-darkplum-900/60 border border-purple-950 rounded-3xl p-8 shadow-2xl">
                 <div class="flex items-center space-x-4 mb-4">
                     <span class="text-3xl">🧸🌸</span>
-                    <h2 class="text-2xl lg:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-300">Interactive Verse-by-Verse Lexicon</h2>
+                    <h2 class="text-2xl lg:text-3xl font-black safe-gradient-text font-black">Interactive Verse-by-Verse Lexicon</h2>
                 </div>
                 <p class="text-sm md:text-base text-purple-300/80 mb-8 leading-relaxed">
                     This interactive explorer guides us word-by-word through the entire Surah. **Click or tap** on any Arabic segment below to display its detailed grammatical breakdown safely on any device.
@@ -206,7 +316,7 @@
                 <!-- Inner Modal Card -->
                 <div class="modal-card bg-gradient-to-r from-purple-950 to-darkplum-900 border-2 border-pink-500/50 rounded-3xl p-8 md:p-10 shadow-2xl max-w-2xl w-full relative overflow-hidden transform scale-95 opacity-0 transition-all duration-200">
                     <div class="absolute top-0 right-0 p-4">
-                        <button id="modal-close-btn" class="text-purple-300 hover:text-white transition-all text-sm font-black bg-purple-900/60 px-4 py-2 rounded-xl border border-purple-800 shadow-md">✕ Close</button>
+                        <button id="modal-close-btn" type="button" onclick="closeLexiconDetailManual()" class="text-purple-100 hover:text-white transition-all text-base font-black bg-purple-900/80 px-5 py-3 rounded-xl border border-purple-700 shadow-md">✕ Close</button>
                     </div>
                     <div class="space-y-6">
                         <div>
@@ -238,7 +348,7 @@
             <div class="bg-darkplum-900/60 border border-purple-950 rounded-2xl p-6 shadow-xl space-y-6">
                 <div class="flex items-center space-x-3">
                     <span class="text-2xl">✨</span>
-                    <h2 class="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-300">Spiritual Translations & Meaning Deep-Dives</h2>
+                    <h2 class="text-xl font-black safe-gradient-text font-black">Spiritual Translations & Meaning Deep-Dives</h2>
                 </div>
                 <p class="text-sm text-purple-300/80 leading-relaxed">
                     Surah Al-Fatiha is not just words—it's a spiritual dialogue between us and Allah. Here is the complete flow, connecting literal translation with deeper heart-felt lessons.
@@ -345,7 +455,7 @@
             <div class="bg-darkplum-900/60 border border-purple-950 rounded-2xl p-6 shadow-xl space-y-6">
                 <div class="flex items-center space-x-3">
                     <span class="text-2xl">📜</span>
-                    <h2 class="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-300">The Story, Names & Virtues of Al-Fatiha</h2>
+                    <h2 class="text-xl font-black safe-gradient-text font-black">The Story, Names & Virtues of Al-Fatiha</h2>
                 </div>
                 <p class="text-sm text-purple-300/80 leading-relaxed">
                     Sourced from classical records of Tafsir Ibn Kathir, Sahih Al-Bukhari, and Sahih Muslim. Let’s dive together into the beautiful stories and context of this Surah!
@@ -404,7 +514,7 @@
             <div class="bg-darkplum-900/60 border border-purple-950 rounded-2xl p-6 shadow-xl space-y-6">
                 <div class="flex items-center space-x-3">
                     <span class="text-2xl">🎤</span>
-                    <h2 class="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-300">Advanced Recitation & Pronunciation Guide</h2>
+                    <h2 class="text-xl font-black safe-gradient-text font-black">Advanced Recitation & Pronunciation Guide</h2>
                 </div>
                 <p class="text-sm text-purple-300/80 leading-relaxed">
                     Tajweed is all about giving every letter its due right from its exact origin point in the throat or mouth. Let's tackle the trickiest letters in Surah Al-Fatiha, especially our throat letters!
@@ -532,7 +642,7 @@
                 <div class="flex items-center justify-between">
                     <div class="flex items-center space-x-3">
                         <span class="text-2xl">🎯</span>
-                        <h2 class="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-300">Our Progress Tracker</h2>
+                        <h2 class="text-xl font-black safe-gradient-text font-black">Our Progress Tracker</h2>
                     </div>
                     <button onclick="resetTracker()" class="text-[10px] font-bold text-pink-400 hover:underline tracking-wider uppercase">Reset All</button>
                 </div>
@@ -632,7 +742,7 @@
             <div class="bg-darkplum-900/60 border border-purple-950 rounded-2xl p-6 shadow-xl space-y-6">
                 <div class="flex items-center space-x-3">
                     <span class="text-2xl">☕ Journal</span>
-                    <h2 class="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-300">Our Cozy Study Journal</h2>
+                    <h2 class="text-xl font-black safe-gradient-text font-black">Our Cozy Study Journal</h2>
                 </div>
                 <p class="text-xs text-purple-300/80 leading-relaxed">
                     Grab a warm drink and use this collaborative space to reflect together. Answer these prompts to deepen your connection with the Surah and with each other. Click "Save Notes" to keep your reflections active on this device!
@@ -652,14 +762,14 @@
                         <label for="husband-notes" class="block text-xs font-bold text-purple-300 flex items-center gap-1.5">
                             <span>🧸</span> Husband's Reflections:
                         </label>
-                        <textarea id="husband-notes" rows="4" placeholder="Type your personal insights or answers to the prompt here..." class="w-full p-4 bg-darkplum-950 border border-purple-900/50 rounded-xl text-xs text-purple-100 focus:outline-none focus:border-pink-500 transition-all placeholder:text-purple-400/40"></textarea>
+                        <textarea id="husband-notes" rows="4" placeholder="Type your personal insights or answers to the prompt here..." class="journal-textarea w-full p-4 rounded-xl text-xs focus:outline-none transition-all"></textarea>
                     </div>
 
                     <div class="space-y-2">
                         <label for="wife-notes" class="block text-xs font-bold text-purple-300 flex items-center gap-1.5">
                             <span>🌸</span> Wife's Reflections:
                         </label>
-                        <textarea id="wife-notes" rows="4" placeholder="Type your personal insights or answers to the prompt here..." class="w-full p-4 bg-darkplum-950 border border-purple-900/50 rounded-xl text-xs text-purple-100 focus:outline-none focus:border-pink-500 transition-all placeholder:text-purple-400/40"></textarea>
+                        <textarea id="wife-notes" rows="4" placeholder="Type your personal insights or answers to the prompt here..." class="journal-textarea w-full p-4 rounded-xl text-xs focus:outline-none transition-all"></textarea>
                     </div>
                 </div>
 
@@ -908,18 +1018,18 @@
 
             // Manage button highlighting cleanly using classList
             document.querySelectorAll('.lex-word-btn').forEach(btn => {
-                btn.className = "lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all";
+                btn.className = "lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-base md:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md";
             });
             
             // Highlight the specifically clicked button element cleanly
             if (btnElement) {
-                btnElement.className = "lex-word-btn px-3.5 py-2 rounded-lg bg-pink-950/40 border border-pink-500 text-pink-300 text-xs font-bold transition-all shadow-md shadow-pink-500/10";
+                btnElement.className = "lex-word-btn px-6 py-4 rounded-xl bg-pink-950/60 border border-pink-500 text-pink-200 text-base md:text-lg font-bold transition-all shadow-md shadow-pink-500/10";
             }
         }
 
-        // Auto close function is deactivated to prevent laptop hover stutter
+        // Close function kept active so every close path works reliably.
         function closeLexiconDetail() {
-            // Handled exclusively by clicking off the popup or clicking manual close to maintain ultimate stability!
+            hidePopup();
         }
 
         // Manual Close trigger (Called when close button or backdrop wrapper is clicked)
@@ -937,7 +1047,7 @@
             setTimeout(() => {
                 popupWrapper.classList.add('hidden');
                 document.querySelectorAll('.lex-word-btn').forEach(btn => {
-                    btn.className = "lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all";
+                    btn.className = "lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-base md:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md";
                 });
             }, 150);
         }
@@ -946,8 +1056,8 @@
         function changeFontSize(size) {
             const mainBody = document.getElementById('main-body');
             
-            // Clear current font sizes
-            mainBody.classList.remove('text-sm', 'text-base', 'text-lg', 'text-xl', 'text-2xl');
+            // Clear current readable-size setting
+            mainBody.classList.remove('font-size-normal', 'font-size-large', 'font-size-xlarge');
             
             // Clear button background highlights
             document.getElementById('btn-size-normal').className = "text-xs font-bold px-2.5 py-1 rounded-lg text-purple-300 hover:text-white transition-all";
@@ -955,13 +1065,13 @@
             document.getElementById('btn-size-xlarge').className = "text-xs font-bold px-2.5 py-1 rounded-lg text-purple-300 hover:text-white transition-all";
 
             if (size === 'normal') {
-                mainBody.classList.add('text-base');
+                mainBody.classList.add('font-size-normal');
                 document.getElementById('btn-size-normal').className = "text-xs font-bold px-2.5 py-1 rounded-lg bg-pink-600 text-white transition-all shadow-md";
             } else if (size === 'large') {
-                mainBody.classList.add('text-lg');
+                mainBody.classList.add('font-size-large');
                 document.getElementById('btn-size-large').className = "text-xs font-bold px-2.5 py-1 rounded-lg bg-pink-600 text-white transition-all shadow-md";
             } else if (size === 'xlarge') {
-                mainBody.classList.add('text-xl');
+                mainBody.classList.add('font-size-xlarge');
                 document.getElementById('btn-size-xlarge').className = "text-xs font-bold px-2.5 py-1 rounded-lg bg-pink-600 text-white transition-all shadow-md";
             }
             
@@ -1010,7 +1120,9 @@
             "Worship is exclusive to Allah. What are some distractions we can help each other eliminate to improve our prayer focus?",
             "Sustaining and growing are parts of 'Rabb'. How has Allah nurtured our marriage and spiritual growth this past year?",
             "When we ask to be guided to 'Sirat Al-Mustaqeem', what is one collective habit we should start doing today?",
-            "Verse 7 talks about those who received blessings. Who is a role model from Quran history we both want to learn more about?"
+            "Verse 7 talks about those who received blessings. Who is a role model from Quran history we both want to learn more about?",
+            "What is one way we can make our home feel more connected to the Quran this week?",
+            "When we say 'You alone we seek help from,' what is one worry we can both hand over to Allah tonight?"
         ];
 
         function generateNewPrompt() {
@@ -1057,13 +1169,24 @@
 
             // 2. Force popup close when the Close button is clicked
             closeBtn.addEventListener('click', function(event) {
+                event.preventDefault();
+                event.stopPropagation();
                 hidePopup();
+            });
+
+            // 3. Let Escape close the popup too, which helps if you are on desktop/laptop.
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape' && !popupWrapper.classList.contains('hidden')) {
+                    hidePopup();
+                }
             });
 
             // Load font size preference
             const savedSize = localStorage.getItem('fatiha_study_fontsize');
             if (savedSize) {
                 changeFontSize(savedSize);
+            } else {
+                changeFontSize('large');
             }
 
             // Load progress check values
@@ -1089,5 +1212,3 @@
     </script>
 </body>
 </html>
-
-```
