@@ -146,6 +146,23 @@
             border-color: rgba(244, 114, 182, 0.8) !important;
             box-shadow: inset 0 1px 18px rgba(15, 5, 21, 0.55), 0 0 0 3px rgba(219, 39, 119, 0.18);
         }
+        .throat-letter-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 8.75rem;
+            padding: 0.7rem 1rem;
+            border-radius: 0.75rem;
+            border: 1px solid rgba(244, 114, 182, 0.32);
+            background: linear-gradient(135deg, rgba(46, 16, 63, 0.92), rgba(131, 24, 67, 0.38));
+            color: #fce7f3;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: calc(1rem * var(--study-scale)) !important;
+            font-weight: 900;
+            line-height: 1.25;
+            box-shadow: inset 0 1px 14px rgba(15, 5, 21, 0.45);
+            white-space: nowrap;
+        }
         #lexicon-detail-popup:not(.hidden) {
             display: flex;
         }
@@ -533,24 +550,24 @@
                         <div class="bg-purple-950/40 p-3 rounded-lg border border-purple-900/40 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                             <span class="text-xs font-bold text-pink-300">1. Top of Throat (Closest to Mouth)</span>
                             <div class="flex gap-2">
-                                <span class="bg-darkplum-900 px-3 py-1 rounded font-serif font-black text-white">غ (Ghayn)</span>
-                                <span class="bg-darkplum-900 px-3 py-1 rounded font-serif font-black text-white">خ (Khaa)</span>
+                                <span class="throat-letter-badge">غ (Ghayn)</span>
+                                <span class="throat-letter-badge">خ (Khaa)</span>
                             </div>
                         </div>
                         <!-- Middle Throat -->
                         <div class="bg-purple-950/40 p-3 rounded-lg border border-purple-900/40 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                             <span class="text-xs font-bold text-pink-300">2. Middle of Throat (Adam's Apple)</span>
                             <div class="flex gap-2">
-                                <span class="bg-darkplum-900/40 border border-pink-500/30 px-3 py-1 rounded-xl text-pink-300 font-serif font-black animate-pulse">ع ('Ayn)</span>
-                                <span class="bg-purple-950/40 px-3 py-1 rounded-xl font-bold">ح (Haa)</span>
+                                <span class="throat-letter-badge">ع ('Ayn)</span>
+                                <span class="throat-letter-badge">ح (Haa)</span>
                             </div>
                         </div>
                         <!-- Bottom Throat -->
                         <div class="bg-darkplum-950/30 p-3 rounded-lg border border-purple-950 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                             <span class="text-xs font-bold text-purple-400">3. Bottom of Throat (Deepest Chest)</span>
                             <div class="flex gap-2">
-                                <span class="bg-darkplum-900 px-3 py-1 rounded font-serif font-black text-purple-300">هـ (Haa)</span>
-                                <span class="bg-darkplum-900 px-3 py-1 rounded font-serif font-black text-purple-300">أ (Hamzah)</span>
+                                <span class="throat-letter-badge">هـ (Haa)</span>
+                                <span class="throat-letter-badge">أ (Hamzah)</span>
                             </div>
                         </div>
                     </div>
