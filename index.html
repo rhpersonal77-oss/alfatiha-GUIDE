@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
@@ -49,7 +48,7 @@
         }
     </style>
 </head>
-<body class="bg-darkplum-950 text-purple-100 min-h-screen flex flex-col font-sans selection:bg-neonpink-500 selection:text-white text-base md:text-lg">
+<body id="main-body" class="bg-darkplum-950 text-purple-100 min-h-screen flex flex-col font-sans selection:bg-neonpink-500 selection:text-white text-base md:text-lg transition-all duration-200">
 
     <!-- Warm Glowing Background Accents -->
     <div class="absolute top-0 left-1/4 w-96 h-96 bg-purple-900/20 rounded-full blur-[100px] pointer-events-none"></div>
@@ -58,20 +57,30 @@
     <!-- Header Navigation -->
     <header class="bg-darkplum-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-purple-950 shadow-md">
         <div class="max-w-6xl mx-auto px-6 py-5 flex flex-col lg:flex-row items-center justify-between gap-6">
-            <div class="flex items-center space-x-4">
-                <div class="bg-gradient-to-tr from-pink-600 to-purple-600 p-3 rounded-2xl shadow-lg shadow-pink-500/10 text-white">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                    </svg>
+            <div class="flex items-center justify-between w-full lg:w-auto gap-4">
+                <div class="flex items-center space-x-4">
+                    <div class="bg-gradient-to-tr from-pink-600 to-purple-600 p-3 rounded-2xl shadow-lg shadow-pink-500/10 text-white">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-xl md:text-2xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-300">OUR SACRED STUDY SANCTUARY</h1>
+                        <p class="text-xs sm:text-sm text-pink-400/80 font-mono tracking-widest uppercase">🧸 Husband & Wife Al-Fatiha Companion 🌸</p>
+                    </div>
                 </div>
-                <div>
-                    <h1 class="text-xl md:text-2xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-300">OUR SACRED STUDY SANCTUARY</h1>
-                    <p class="text-xs sm:text-sm text-pink-400/80 font-mono tracking-widest uppercase">🧸 Husband & Wife Al-Fatiha Companion 🌸</p>
+
+                <!-- Text Size Adjuster Widget -->
+                <div class="flex items-center space-x-2 bg-darkplum-950 px-3 py-2 rounded-2xl border border-purple-950/60 shadow-inner">
+                    <span class="text-xs font-bold text-pink-300 hidden sm:inline">Text:</span>
+                    <button onclick="changeFontSize('normal')" id="btn-size-normal" class="text-xs font-bold px-2.5 py-1 rounded-lg bg-pink-600 text-white transition-all">🧸 Reg</button>
+                    <button onclick="changeFontSize('large')" id="btn-size-large" class="text-xs font-bold px-2.5 py-1 rounded-lg text-purple-300 hover:text-white transition-all">🌸 Lrg</button>
+                    <button onclick="changeFontSize('xlarge')" id="btn-size-xlarge" class="text-xs font-bold px-2.5 py-1 rounded-lg text-purple-300 hover:text-white transition-all">💖 XL</button>
                 </div>
             </div>
             
             <!-- Navigation Tabs -->
-            <nav class="flex flex-wrap gap-2 bg-darkplum-950 p-2 rounded-2xl border border-purple-950/60 shadow-lg">
+            <nav class="flex flex-wrap gap-2 bg-darkplum-950 p-2 rounded-2xl border border-purple-950/60 shadow-lg justify-center">
                 <button onclick="switchTab('lexicon')" id="tab-lexicon" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-bold transition-all bg-neonpink-600 text-white shadow-md">
                     📚 Lexicon
                 </button>
@@ -193,10 +202,11 @@
             </div>
 
             <!-- INTERACTIVE POPUP CARD: Clicking backdrop, inner Close button, or clicking outside closes it cleanly -->
-            <div id="lexicon-detail-popup" class="fixed inset-0 bg-darkplum-950/80 backdrop-blur-md z-50 flex items-center justify-center p-6 hidden" onclick="closeLexiconDetailManual()">
-                <div class="bg-gradient-to-r from-purple-950 to-darkplum-900 border-2 border-pink-500/50 rounded-3xl p-8 md:p-10 shadow-2xl max-w-3xl w-full relative overflow-hidden transform scale-95 opacity-0 transition-all duration-200" onclick="event.stopPropagation()">
+            <div id="lexicon-detail-popup" class="fixed inset-0 bg-darkplum-950/80 backdrop-blur-md z-50 flex items-center justify-center p-6 hidden">
+                <!-- Inner Modal Card -->
+                <div class="modal-card bg-gradient-to-r from-purple-950 to-darkplum-900 border-2 border-pink-500/50 rounded-3xl p-8 md:p-10 shadow-2xl max-w-2xl w-full relative overflow-hidden transform scale-95 opacity-0 transition-all duration-200">
                     <div class="absolute top-0 right-0 p-4">
-                        <button onclick="closeLexiconDetailManual()" class="text-purple-300 hover:text-white transition-all text-sm font-black bg-purple-900/60 px-4 py-2 rounded-xl border border-purple-800 shadow-md">✕ Close</button>
+                        <button id="modal-close-btn" class="text-purple-300 hover:text-white transition-all text-sm font-black bg-purple-900/60 px-4 py-2 rounded-xl border border-purple-800 shadow-md">✕ Close</button>
                     </div>
                     <div class="space-y-6">
                         <div>
@@ -337,7 +347,7 @@
                     <span class="text-2xl">📜</span>
                     <h2 class="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-300">The Story, Names & Virtues of Al-Fatiha</h2>
                 </div>
-                <p class="text-xs text-purple-300/80 leading-relaxed">
+                <p class="text-sm text-purple-300/80 leading-relaxed">
                     Sourced from classical records of Tafsir Ibn Kathir, Sahih Al-Bukhari, and Sahih Muslim. Let’s dive together into the beautiful stories and context of this Surah!
                 </p>
 
@@ -347,10 +357,10 @@
                         <span class="p-1 bg-pink-950/50 rounded-lg">💬</span>
                         <span>The Conversational Hadith Qudsi (The Dialogue)</span>
                     </div>
-                    <p class="text-xs text-purple-200 leading-relaxed">
+                    <p class="text-sm text-purple-200 leading-relaxed">
                         In Sahih Muslim, the Prophet Muhammad ﷺ narrated that Allah says:
                     </p>
-                    <div class="p-4 bg-purple-950/50 rounded-lg text-xs italic space-y-2 border-l-2 border-pink-500 text-purple-300">
+                    <div class="p-4 bg-purple-950/50 rounded-lg text-sm italic space-y-2 border-l-2 border-pink-500 text-purple-300 leading-relaxed">
                         <p><strong>"I have divided the prayer between Myself and My servant into two halves, and My servant shall have what he has asked for."</strong></p>
                         <p>• When the servant says: <em>Al-hamdu lil-lahi Rabbil-'alamin</em>, Allah says: <strong>"My servant has praised Me."</strong></p>
                         <p>• When he says: <em>Ar-Rahmanir-Raheem</em>, Allah says: <strong>"My servant has exalted Me."</strong></p>
@@ -366,10 +376,10 @@
                         <span class="p-1 bg-pink-950/50 rounded-lg">🏷️</span>
                         <span>Names of the Surah and Their Meanings</span>
                     </div>
-                    <ul class="space-y-2.5 text-xs text-purple-300">
-                        <li><strong class="text-white">1. Umm al-Kitab (Mother of the Book):</strong> Sourced from Hadiths, it is called this because it encapsulates the entire message of the Qur'an: Monotheism (Tawheed), Guidance, and Accountability.</li>
-                        <li><strong class="text-white">2. As-Sab'al-Mathani (The Seven Oft-Repeated Verses):</strong> Mentioned directly by Allah in Surah Al-Hijr (15:87). It consists of exactly 7 verses that are recited in every single unit of prayer.</li>
-                        <li><strong class="text-white">3. Ash-Shifa (The Cure):</strong> Classical scholars recorded that reciting it cures spiritual and physical ailments.</li>
+                    <ul class="space-y-2.5 text-sm text-purple-300 leading-relaxed">
+                        <li><strong class="text-white text-base">1. Umm al-Kitab (Mother of the Book):</strong> Sourced from Hadiths, it is called this because it encapsulates the entire message of the Qur'an: Monotheism (Tawheed), Guidance, and Accountability.</li>
+                        <li><strong class="text-white text-base">2. As-Sab'al-Mathani (The Seven Oft-Repeated Verses):</strong> Mentioned directly by Allah in Surah Al-Hijr (15:87). It consists of exactly 7 verses that are recited in every single unit of prayer.</li>
+                        <li><strong class="text-white text-base">3. Ash-Shifa (The Cure):</strong> Classical scholars recorded that reciting it cures spiritual and physical ailments.</li>
                     </ul>
                 </div>
 
@@ -379,10 +389,10 @@
                         <span class="p-1 bg-pink-950/50 rounded-lg">🦂</span>
                         <span>The Miracle Story: The Scorpion Sting Cure</span>
                     </div>
-                    <p class="text-xs text-purple-200 leading-relaxed">
+                    <p class="text-sm text-purple-200 leading-relaxed">
                         Recorded in Sahih Al-Bukhari, a group of companions of the Prophet ﷺ were traveling when they passed by a tribal chief who was severely stung by a scorpion. The tribe asked if any of the companions had a cure.
                     </p>
-                    <p class="text-xs text-purple-300/80 leading-relaxed">
+                    <p class="text-sm text-purple-300 leading-relaxed">
                         One companion stepped forward and recited **Surah Al-Fatiha** over the chief and spat lightly. The chief was cured instantly, standing up as if he had been released from a chain! The Prophet ﷺ later smiled and asked the companion: <strong>"How did you know it was a Ruqyah (spiritual cure)?"</strong>
                     </p>
                 </div>
@@ -396,7 +406,7 @@
                     <span class="text-2xl">🎤</span>
                     <h2 class="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-300">Advanced Recitation & Pronunciation Guide</h2>
                 </div>
-                <p class="text-xs text-purple-300/80 leading-relaxed">
+                <p class="text-sm text-purple-300/80 leading-relaxed">
                     Tajweed is all about giving every letter its due right from its exact origin point in the throat or mouth. Let's tackle the trickiest letters in Surah Al-Fatiha, especially our throat letters!
                 </p>
 
@@ -888,7 +898,7 @@
 
             // Display popup with smooth transition
             const popupWrapper = document.getElementById('lexicon-detail-popup');
-            const innerCard = popupWrapper.querySelector('div');
+            const innerCard = popupWrapper.querySelector('.modal-card');
 
             popupWrapper.classList.remove('hidden');
             setTimeout(() => {
@@ -898,12 +908,12 @@
 
             // Manage button highlighting cleanly using classList
             document.querySelectorAll('.lex-word-btn').forEach(btn => {
-                btn.classList.remove('border-pink-500', 'bg-pink-950/40', 'text-pink-300', 'shadow-pink-500/10');
+                btn.className = "lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all";
             });
             
             // Highlight the specifically clicked button element cleanly
             if (btnElement) {
-                btnElement.classList.add('border-pink-500', 'bg-pink-950/40', 'text-pink-300', 'shadow-pink-500/10');
+                btnElement.className = "lex-word-btn px-3.5 py-2 rounded-lg bg-pink-950/40 border border-pink-500 text-pink-300 text-xs font-bold transition-all shadow-md shadow-pink-500/10";
             }
         }
 
@@ -919,7 +929,7 @@
 
         function hidePopup() {
             const popupWrapper = document.getElementById('lexicon-detail-popup');
-            const innerCard = popupWrapper.querySelector('div');
+            const innerCard = popupWrapper.querySelector('.modal-card');
 
             innerCard.classList.remove('scale-100', 'opacity-100');
             innerCard.classList.add('scale-95', 'opacity-0');
@@ -927,9 +937,36 @@
             setTimeout(() => {
                 popupWrapper.classList.add('hidden');
                 document.querySelectorAll('.lex-word-btn').forEach(btn => {
-                    btn.classList.remove('border-pink-500', 'bg-pink-950/40', 'text-pink-300', 'shadow-pink-500/10');
+                    btn.className = "lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all";
                 });
             }, 150);
+        }
+
+        // Text Size Controller System
+        function changeFontSize(size) {
+            const mainBody = document.getElementById('main-body');
+            
+            // Clear current font sizes
+            mainBody.classList.remove('text-sm', 'text-base', 'text-lg', 'text-xl', 'text-2xl');
+            
+            // Clear button background highlights
+            document.getElementById('btn-size-normal').className = "text-xs font-bold px-2.5 py-1 rounded-lg text-purple-300 hover:text-white transition-all";
+            document.getElementById('btn-size-large').className = "text-xs font-bold px-2.5 py-1 rounded-lg text-purple-300 hover:text-white transition-all";
+            document.getElementById('btn-size-xlarge').className = "text-xs font-bold px-2.5 py-1 rounded-lg text-purple-300 hover:text-white transition-all";
+
+            if (size === 'normal') {
+                mainBody.classList.add('text-base');
+                document.getElementById('btn-size-normal').className = "text-xs font-bold px-2.5 py-1 rounded-lg bg-pink-600 text-white transition-all shadow-md";
+            } else if (size === 'large') {
+                mainBody.classList.add('text-lg');
+                document.getElementById('btn-size-large').className = "text-xs font-bold px-2.5 py-1 rounded-lg bg-pink-600 text-white transition-all shadow-md";
+            } else if (size === 'xlarge') {
+                mainBody.classList.add('text-xl');
+                document.getElementById('btn-size-xlarge').className = "text-xs font-bold px-2.5 py-1 rounded-lg bg-pink-600 text-white transition-all shadow-md";
+            }
+            
+            // Save selection
+            localStorage.setItem('fatiha_study_fontsize', size);
         }
 
         // Memorization tracker functions
@@ -960,7 +997,6 @@
             localStorage.setItem('wife_progress_checks', JSON.stringify(Array.from(checks).map(c => c.checked)));
         }
 
-        // Reset Tracker
         function resetTracker() {
             document.querySelectorAll('.husband-check').forEach(c => c.checked = false);
             document.querySelectorAll('.wife-check').forEach(c => c.checked = false);
@@ -1006,8 +1042,30 @@
             localStorage.removeItem('fatiha_wife_journal');
         }
 
-        // Load saved states
+        // Load saved states & set up stable desktop closures
         window.onload = function() {
+            // Setup robust modal event listeners for laptop
+            const popupWrapper = document.getElementById('lexicon-detail-popup');
+            const closeBtn = document.getElementById('modal-close-btn');
+
+            // 1. Force popup close when the actual backdrop is clicked
+            popupWrapper.addEventListener('click', function(event) {
+                if (event.target === popupWrapper) {
+                    hidePopup();
+                }
+            });
+
+            // 2. Force popup close when the Close button is clicked
+            closeBtn.addEventListener('click', function(event) {
+                hidePopup();
+            });
+
+            // Load font size preference
+            const savedSize = localStorage.getItem('fatiha_study_fontsize');
+            if (savedSize) {
+                changeFontSize(savedSize);
+            }
+
             // Load progress check values
             const hSaved = JSON.parse(localStorage.getItem('husband_progress_checks'));
             if (hSaved) {
