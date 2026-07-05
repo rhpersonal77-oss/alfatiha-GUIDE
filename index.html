@@ -104,7 +104,7 @@
                     <h2 class="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-300">Interactive Verse-by-Verse Lexicon</h2>
                 </div>
                 <p class="text-xs text-purple-300/80 mb-6 leading-relaxed">
-                    This interactive explorer guides us word-by-word through the entire Surah. **Hover over or click** on any Arabic segment to instantly pop up its exact meaning and details without scrolling!
+                    This interactive explorer guides us word-by-word through the entire Surah. **Click or tap** on any Arabic segment below to display its detailed grammatical breakdown safely on any device.
                 </p>
 
                 <!-- Complete Verse Navigation -->
@@ -113,10 +113,10 @@
                     <div class="bg-darkplum-950/80 p-5 rounded-xl border border-purple-950/40">
                         <span class="text-[10px] font-bold text-pink-400 tracking-widest uppercase block mb-3">Verse 1 — The Opening</span>
                         <div class="flex flex-wrap gap-2">
-                            <button onmouseenter="showWord('Bi', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('Bi', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Bi</button>
-                            <button onmouseenter="showWord('Ismi', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('Ismi', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ismi</button>
-                            <button onmouseenter="showWord('Ar-Rahman', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('Ar-Rahman', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ar-Rahman</button>
-                            <button onmouseenter="showWord('Ar-Raheem', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('Ar-Raheem', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ar-Raheem</button>
+                            <button onclick="showWord('Bi', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Bi</button>
+                            <button onclick="showWord('Ismi', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ismi</button>
+                            <button onclick="showWord('Ar-Rahman', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ar-Rahman</button>
+                            <button onclick="showWord('Ar-Raheem', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ar-Raheem</button>
                         </div>
                     </div>
 
@@ -124,10 +124,10 @@
                     <div class="bg-darkplum-950/80 p-5 rounded-xl border border-purple-950/40">
                         <span class="text-[10px] font-bold text-pink-400 tracking-widest uppercase block mb-3">Verse 2 — All Praise</span>
                         <div class="flex flex-wrap gap-2">
-                            <button onmouseenter="showWord('Al-hamdu', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('Al-hamdu', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Al-hamdu</button>
-                            <button onmouseenter="showWord('Lil-lahee', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('Lil-lahee', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Lil-lahee</button>
-                            <button onmouseenter="showWord('Rabb', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('Rabb', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Rabb</button>
-                            <button onmouseenter="showWord('Al-Alamin', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('Al-Alamin', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Al-'Alamin</button>
+                            <button onclick="showWord('Al-hamdu', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Al-hamdu</button>
+                            <button onclick="showWord('Lil-lahee', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Lil-lahee</button>
+                            <button onclick="showWord('Rabb', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Rabb</button>
+                            <button onclick="showWord('Al-Alamin', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Al-'Alamin</button>
                         </div>
                     </div>
 
@@ -135,8 +135,8 @@
                     <div class="bg-darkplum-950/80 p-5 rounded-xl border border-purple-950/40">
                         <span class="text-[10px] font-bold text-pink-400 tracking-widest uppercase block mb-3">Verse 3 — Attributes of Love</span>
                         <div class="flex flex-wrap gap-2">
-                            <button onmouseenter="showWord('Ar-Rahman', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('Ar-Rahman', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ar-Rahman</button>
-                            <button onmouseenter="showWord('Ar-Raheem', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('Ar-Raheem', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ar-Raheem</button>
+                            <button onclick="showWord('Ar-Rahman', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ar-Rahman</button>
+                            <button onclick="showWord('Ar-Raheem', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ar-Raheem</button>
                         </div>
                     </div>
 
@@ -144,9 +144,9 @@
                     <div class="bg-darkplum-950/80 p-5 rounded-xl border border-purple-950/40">
                         <span class="text-[10px] font-bold text-pink-400 tracking-widest uppercase block mb-3">Verse 4 — Sovereignty</span>
                         <div class="flex flex-wrap gap-2">
-                            <button onmouseenter="showWord('Maliki', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('Maliki', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Maliki</button>
-                            <button onmouseenter="showWord('Yawm', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('Yawm', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Yawm</button>
-                            <button onmouseenter="showWord('Ad-Deen', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('Ad-Deen', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ad-Deen</button>
+                            <button onclick="showWord('Maliki', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Maliki</button>
+                            <button onclick="showWord('Yawm', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Yawm</button>
+                            <button onclick="showWord('Ad-Deen', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ad-Deen</button>
                         </div>
                     </div>
 
@@ -154,11 +154,11 @@
                     <div class="bg-darkplum-950/80 p-5 rounded-xl border border-purple-950/40">
                         <span class="text-[10px] font-bold text-pink-400 tracking-widest uppercase block mb-3">Verse 5 — Covenant of worship</span>
                         <div class="flex flex-wrap gap-2">
-                            <button onmouseenter="showWord('Eyyaka', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('Eyyaka', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Eyyāka</button>
-                            <button onmouseenter="showWord('budu', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('budu', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">budu</button>
-                            <button onmouseenter="showWord('na', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('na', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">na</button>
-                            <button onmouseenter="showWord('Wa', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('Wa', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Wa</button>
-                            <button onmouseenter="showWord('sta-een', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('sta-een', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">sta'een</button>
+                            <button onclick="showWord('Eyyaka', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Eyyāka</button>
+                            <button onclick="showWord('budu', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">budu</button>
+                            <button onclick="showWord('na', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">na</button>
+                            <button onclick="showWord('Wa', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Wa</button>
+                            <button onclick="showWord('sta-een', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">sta'een</button>
                         </div>
                     </div>
 
@@ -166,9 +166,9 @@
                     <div class="bg-darkplum-950/80 p-5 rounded-xl border border-purple-950/40">
                         <span class="text-[10px] font-bold text-pink-400 tracking-widest uppercase block mb-3">Verse 6 — Supplication for guidance</span>
                         <div class="flex flex-wrap gap-2">
-                            <button onmouseenter="showWord('Ehdee', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('Ehdee', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ehdee</button>
-                            <button onmouseenter="showWord('Sirat', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('Sirat', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Sirat</button>
-                            <button onmouseenter="showWord('Mustaqeem', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('Mustaqeem', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Mustaqeem</button>
+                            <button onclick="showWord('Ehdee', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ehdee</button>
+                            <button onclick="showWord('Sirat', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Sirat</button>
+                            <button onclick="showWord('Mustaqeem', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Mustaqeem</button>
                         </div>
                     </div>
 
@@ -176,26 +176,26 @@
                     <div class="bg-darkplum-950/80 p-5 rounded-xl border border-purple-950/40">
                         <span class="text-[10px] font-bold text-pink-400 tracking-widest uppercase block mb-3">Verse 7 — The Divided Paths</span>
                         <div class="flex flex-wrap gap-2">
-                            <button onmouseenter="showWord('Latheena', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('Latheena', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Latheena</button>
-                            <button onmouseenter="showWord('An-am', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('An-am', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">An'am</button>
-                            <button onmouseenter="showWord('Ta', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('Ta', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ta</button>
-                            <button onmouseenter="showWord('An-am-ta', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('An-am-ta', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">An'am'ta</button>
-                            <button onmouseenter="showWord('Alayhim', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('Alayhim', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">'Alayhim</button>
-                            <button onmouseenter="showWord('Ghayri', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('Ghayri', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ghayri</button>
-                            <button onmouseenter="showWord('Al-Maghdoobi', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('Al-Maghdoobi', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Al-Maghdūbi</button>
-                            <button onmouseenter="showWord('Wa', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('Wa', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Wa</button>
-                            <button onmouseenter="showWord('La', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('La', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Lā</button>
-                            <button onmouseenter="showWord('Ad-Daleen', this)" onmouseleave="closeLexiconDetail()" onclick="showWordMobile('Ad-Daleen', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ad-Daleen</button>
+                            <button onclick="showWord('Latheena', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Latheena</button>
+                            <button onclick="showWord('An-am', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">An'am</button>
+                            <button onclick="showWord('Ta', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ta</button>
+                            <button onclick="showWord('An-am-ta', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">An'am'ta</button>
+                            <button onclick="showWord('Alayhim', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">'Alayhim</button>
+                            <button onclick="showWord('Ghayri', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ghayri</button>
+                            <button onclick="showWord('Al-Maghdoobi', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Al-Maghdūbi</button>
+                            <button onclick="showWord('Wa', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Wa</button>
+                            <button onclick="showWord('La', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Lā</button>
+                            <button onclick="showWord('Ad-Daleen', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ad-Daleen</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- HOVER POPUP CARD: Positioned absolute/fixed near mouse/center so NO scrolling is needed! -->
-            <div id="lexicon-detail-popup" class="fixed inset-0 bg-darkplum-950/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden" onclick="closeLexiconDetailManual()">
-                <div class="bg-gradient-to-r from-purple-950 to-darkplum-900 border border-pink-500/50 rounded-2xl p-6 shadow-2xl max-w-lg w-full relative overflow-hidden transform scale-95 opacity-0 transition-all duration-200" onclick="event.stopPropagation()">
+            <!-- INTERACTIVE POPUP CARD: Opens on Tap/Click for both devices and closes gracefully -->
+            <div id="lexicon-detail-popup" class="fixed inset-0 bg-darkplum-950/75 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden" onclick="closeLexiconDetail()">
+                <div class="bg-gradient-to-r from-purple-950 to-darkplum-900 border border-pink-500/50 rounded-2xl p-6 shadow-2xl max-w-lg w-full relative overflow-hidden transform scale-95 opacity-0 transition-all duration-200 animate-none" onclick="event.stopPropagation()">
                     <div class="absolute top-0 right-0 p-3">
-                        <button onclick="closeLexiconDetailManual()" class="text-purple-400 hover:text-white transition-all text-xs font-bold bg-purple-900/40 px-2.5 py-1 rounded">✕ Close</button>
+                        <button onclick="closeLexiconDetail()" class="text-purple-400 hover:text-white transition-all text-xs font-bold bg-purple-900/40 px-2.5 py-1 rounded">✕ Close</button>
                     </div>
                     <div class="space-y-4">
                         <div>
@@ -218,7 +218,7 @@
             </div>
 
             <div id="lexicon-placeholder" class="p-5 text-center bg-darkplum-900/30 rounded-xl border border-purple-950/40 text-purple-400 text-xs">
-                💡 **Hover over** on laptop or **tap** on mobile to read immediate word metrics!
+                💡 **Tap or click** on any of the Arabic word buttons above to view its detailed breakdown!
             </div>
         </section>
 
@@ -329,7 +329,7 @@
             </div>
         </section>
 
-        <!-- NEW TAB: STORY, BACKGROUND & SECRETS SOURCED FROM TRUSTED TAFSIR -->
+        <!-- TAB: STORY, BACKGROUND & SECRETS SOURCED FROM TRUSTED TAFSIR -->
         <section id="section-story" class="tab-content hidden space-y-6">
             <div class="bg-darkplum-900/60 border border-purple-950 rounded-2xl p-6 shadow-xl space-y-6">
                 <div class="flex items-center space-x-3">
@@ -388,71 +388,123 @@
             </div>
         </section>
 
-        <!-- TAB 3: RECITATION, PRONUNCIATION & TAJWEED COMPANION -->
+        <!-- TAB 3: RECITATION, PRONUNCIATION & TAJWEED COMPANION (EXPANDED THROAT MASTERCLASS!) -->
         <section id="section-recitation" class="tab-content hidden space-y-6">
             <div class="bg-darkplum-900/60 border border-purple-950 rounded-2xl p-6 shadow-xl space-y-6">
                 <div class="flex items-center space-x-3">
                     <span class="text-2xl">🎤</span>
-                    <h2 class="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-300">Recitation & Tajweed Guide</h2>
+                    <h2 class="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-300">Advanced Recitation & Pronunciation Guide</h2>
                 </div>
                 <p class="text-xs text-purple-300/80 leading-relaxed">
-                    To beautify our recitation together, let’s focus on the most important letters and tajweed rules in this Surah. Here are the key mouth-articulators and focus points!
+                    Tajweed is all about giving every letter its due right from its exact origin point in the throat or mouth. Let's tackle the trickiest letters in Surah Al-Fatiha, especially our throat letters!
                 </p>
 
+                <!-- VISUAL THROAT ARTICULATION MAP -->
+                <div class="bg-darkplum-950/80 border border-purple-900/40 p-5 rounded-xl space-y-4">
+                    <h3 class="text-xs font-black text-pink-400 tracking-wider uppercase flex items-center gap-1.5">
+                        <span>🗣️</span> The Throat Letters (Al-Huroof Al-Halqiyyah) Map
+                    </h3>
+                    <p class="text-[11px] text-purple-300/90 leading-relaxed">
+                        There are 6 letters created in the throat, divided into 3 distinct zones. Let’s practice locating them together:
+                    </p>
+                    <div class="space-y-2 pt-2">
+                        <!-- Top Throat -->
+                        <div class="bg-purple-950/40 p-3 rounded-lg border border-purple-900/40 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <span class="text-xs font-bold text-pink-300">1. Top of Throat (Closest to Mouth)</span>
+                            <div class="flex gap-2">
+                                <span class="bg-darkplum-900 px-3 py-1 rounded font-serif font-black text-white">غ (Ghayn)</span>
+                                <span class="bg-darkplum-900 px-3 py-1 rounded font-serif font-black text-white">خ (Khaa)</span>
+                            </div>
+                        </div>
+                        <!-- Middle Throat -->
+                        <div class="bg-purple-950/40 p-3 rounded-lg border border-purple-900/40 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <span class="text-xs font-bold text-pink-300">2. Middle of Throat (Adam's Apple)</span>
+                            <div class="flex gap-2">
+                                <span class="bg-darkplum-900/40 border border-pink-500/30 px-3 py-1 rounded-xl text-pink-300 font-serif font-black animate-pulse">ع ('Ayn)</span>
+                                <span class="bg-purple-950/40 px-3 py-1 rounded-xl font-bold">ح (Haa)</span>
+                            </div>
+                        </div>
+                        <!-- Bottom Throat -->
+                        <div class="bg-darkplum-950/30 p-3 rounded-lg border border-purple-950 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <span class="text-xs font-bold text-purple-400">3. Bottom of Throat (Deepest Chest)</span>
+                            <div class="flex gap-2">
+                                <span class="bg-darkplum-900 px-3 py-1 rounded font-serif font-black text-purple-300">هـ (Haa)</span>
+                                <span class="bg-darkplum-900 px-3 py-1 rounded font-serif font-black text-purple-300">أ (Hamzah)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DEEP DIVE: ELUSIVE 'AYN VS GHAYN -->
+                <div class="bg-gradient-to-r from-magenta-950/40 to-darkplum-950/80 border border-pink-500/20 p-5 rounded-xl space-y-4">
+                    <h3 class="text-xs font-black text-pink-300 tracking-wider uppercase flex items-center gap-1.5">
+                        <span>💥</span> The Ultimate 'Ayn (ع) vs Ghayn (غ) Showdown
+                    </h3>
+                    <p class="text-xs text-purple-200/90 leading-relaxed">
+                        These are two of the hardest sounds to master because they originate very close together, but use completely different muscle mechanics:
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- 'Ayn ع -->
+                        <div class="bg-darkplum-900/70 p-4 rounded-xl border border-purple-900/30 space-y-2">
+                            <span class="text-xs font-extrabold text-pink-400 flex items-center gap-1">
+                                <span class="bg-pink-950/80 px-2 py-0.5 rounded text-white font-serif">ع</span>
+                                <span>'Ayn — Middle Throat Squeeze</span>
+                            </span>
+                            <p class="text-[11px] text-purple-200 leading-relaxed">
+                                <strong>Where it is:</strong> Right in the middle of your throat (where your Adam's apple is).
+                            </p>
+                            <p class="text-[11px] text-purple-300/80 leading-relaxed">
+                                <strong>How to practice:</strong> Swallow! Notice how the middle of your throat squeezes shut? That exact muscle contraction is what you use to make the <strong>'Ayn</strong> sound. Think of it as a smooth, deep, compressed squeeze.
+                            </p>
+                            <p class="text-[10px] font-mono text-pink-300 italic">Example: Al-'Alamin (الْعَالَمِينَ) / nasta'een (نَسْتَعِينُ)</p>
+                        </div>
+
+                        <!-- Ghayn غ -->
+                        <div class="bg-darkplum-900/70 p-4 rounded-xl border border-purple-900/30 space-y-2">
+                            <span class="text-xs font-extrabold text-pink-400 flex items-center gap-1">
+                                <span class="bg-pink-950/80 px-2 py-0.5 rounded text-white font-serif">غ</span>
+                                <span>Ghayn — Upper Throat Gargle</span>
+                            </span>
+                            <p class="text-[11px] text-purple-200 leading-relaxed">
+                                <strong>Where it is:</strong> Top of your throat, right behind your tongue (near where you gargle).
+                            </p>
+                            <p class="text-[11px] text-purple-300/80 leading-relaxed">
+                                <strong>How to practice:</strong> Pretend you are taking a sip of water, tilting your head back, and gargling! That wet, vibrating scraping sound is the <strong>Ghayn</strong>. It is smooth and continuous, like a French gargled "R" sound.
+                            </p>
+                            <p class="text-[10px] font-mono text-pink-300 italic">Example: Ghayri (غَيْرِ) / Al-Maghdoobi (الْمَغْضُوبِ)</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <!-- Rule 1: The Ayn -->
+                    <!-- Rule: Sharp Haa vs Soft Haa -->
                     <div class="bg-darkplum-950/60 border border-purple-950 p-5 rounded-xl space-y-2">
                         <div class="flex items-center space-x-2 text-pink-400 font-bold text-sm">
-                            <span class="p-1 bg-pink-950/50 rounded-lg">ع</span>
-                            <span>The Letter 'Ayn (ع)</span>
+                            <span class="p-1 bg-pink-950/50 rounded-lg">ح vs هـ</span>
+                            <span>The Great "Haa" Difference</span>
                         </div>
                         <p class="text-xs text-purple-200 leading-relaxed">
-                            <strong>Found in:</strong> <em>Al-'Alamin</em> and <em>nasta'een</em>.
+                            We have two types of "H" in Surah Al-Fatiha:
                         </p>
                         <p class="text-xs text-purple-300/80 leading-relaxed">
-                            <strong>How to recite:</strong> This letter comes from the middle of the throat. It is a smooth squeeze, not a harsh choke. Make sure not to pronounce it like a simple "A" or "I" sound. Squeeze slightly to get that beautiful middle-throat resonance.
+                            • <strong class="text-white">Sharp Haa (ح):</strong> Squeezed, breathy sound from the middle throat. Sounds like sighing with relief. (Found in <em>Al-hamdu</em>, <em>Ar-Rahman</em>, <em>Ar-Raheem</em>).
+                            <br>
+                            • <strong class="text-white">Soft Haa (هـ):</strong> Relaxed, deep sound from the bottom chest. Like breathing out warmly. (Found in <em>Lil-lahee</em>, <em>'Alayhim</em>).
                         </p>
                     </div>
 
-                    <!-- Rule 2: The Haa -->
-                    <div class="bg-darkplum-950/60 border border-purple-950 p-5 rounded-xl space-y-2">
-                        <div class="flex items-center space-x-2 text-pink-400 font-bold text-sm">
-                            <span class="p-1 bg-pink-950/50 rounded-lg">ح</span>
-                            <span>The Sharp 'Haa' (ح)</span>
-                        </div>
-                        <p class="text-xs text-purple-200 leading-relaxed">
-                            <strong>Found in:</strong> <em>Al-hamdu</em>, <em>Ar-Rahman</em>, and <em>Ar-Raheem</em>.
-                        </p>
-                        <p class="text-xs text-purple-300/80 leading-relaxed">
-                            <strong>How to recite:</strong> This is a crisp, breathy "H" sound that also originates from the middle throat, like sighing or blowing warm steam onto a glass window. It is distinct from the soft, deep chest 'Haa' (ه).
-                        </p>
-                    </div>
-
-                    <!-- Rule 3: The Daad -->
+                    <!-- Rule: The Heavy Daad -->
                     <div class="bg-darkplum-950/60 border border-purple-950 p-5 rounded-xl space-y-2">
                         <div class="flex items-center space-x-2 text-pink-400 font-bold text-sm">
                             <span class="p-1 bg-pink-950/50 rounded-lg">ض</span>
-                            <span>The Letter 'Daad' (ض)</span>
+                            <span>The Heavy 'Daad' (ض)</span>
                         </div>
                         <p class="text-xs text-purple-200 leading-relaxed">
                             <strong>Found in:</strong> <em>Al-Maghdoobi</em> and <em>ad-Daleen</em>.
                         </p>
                         <p class="text-xs text-purple-300/80 leading-relaxed">
                             <strong>How to recite:</strong> Universally known as the most unique letter in Arabic. Touch the side/edge of your tongue against your upper molars. It has a heavy, echoing, elongated quality. Avoid letting it turn into a simple English "D".
-                        </p>
-                    </div>
-
-                    <!-- Rule 4: The Madd -->
-                    <div class="bg-darkplum-950/60 border border-purple-950 p-5 rounded-xl space-y-2">
-                        <div class="flex items-center space-x-2 text-pink-400 font-bold text-sm">
-                            <span class="p-1 bg-pink-950/50 rounded-lg">~</span>
-                            <span>Long Madd (Stretching)</span>
-                        </div>
-                        <p class="text-xs text-purple-200 leading-relaxed">
-                            <strong>Found in:</strong> <em>Ad-Daleen</em> (ولا الضَّالِّين).
-                        </p>
-                        <p class="text-xs text-purple-300/80 leading-relaxed">
-                            <strong>How to recite:</strong> This contains a heavy, compulsory 6-count stretch (Madd Lazim) due to the shaddah on the Laam. Stretch the "Aa" beautifully, then merge smoothly into the double "L" sound with emphasis!
                         </p>
                     </div>
                 </div>
@@ -550,7 +602,7 @@
                                 <input type="checkbox" onchange="updateWifeProgress()" class="wife-check w-4 h-4 rounded text-pink-600 bg-darkplum-900 border-purple-900 focus:ring-0 focus:ring-offset-0">
                                 <span class="text-xs font-bold text-purple-200">Verses 5-6 Memorized</span>
                             </label>
-                            <label class="flex items-center space-x-3 p-3 bg-darkplum-950/50 border border-purple-950 rounded-lg cursor-pointer hover:border-pink-500/20 transition-all select-none">
+                            <label class="flex items-center space-x-3 p-3 bg-darkplum-950/50 border border-purple-750 rounded-lg cursor-pointer hover:border-pink-500/20 transition-all select-none">
                                 <input type="checkbox" onchange="updateWifeProgress()" class="wife-check w-4 h-4 rounded text-pink-600 bg-darkplum-900 border-purple-700 focus:ring-0">
                                 <span class="text-xs font-bold text-purple-200">Verse 7 Memorized</span>
                             </label>
@@ -812,14 +864,12 @@
             }
         };
 
-        // Desktop Hover Trigger function
+        // Click-to-open function (Unified for both Laptop and Mobile to prevent any spazzing)
         function showWord(wordKey, btnElement) {
-            // Only trigger automatically on non-touch (hover) screens
-            if (window.matchMedia("(pointer: coarse)").matches) return; 
             displayWordDetail(wordKey, btnElement);
         }
 
-        // Mobile Tap Trigger function
+        // Tap/click handler
         function showWordMobile(wordKey, btnElement) {
             displayWordDetail(wordKey, btnElement);
         }
@@ -849,15 +899,16 @@
             document.querySelectorAll('.lex-word-btn').forEach(btn => {
                 btn.className = "lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all";
             });
+            
+            // Highlight the specifically clicked button element cleanly
             if (btnElement) {
                 btnElement.className = "lex-word-btn px-3.5 py-2 rounded-lg bg-pink-950/40 border border-pink-500 text-pink-300 text-xs font-bold transition-all shadow-md shadow-pink-500/10";
             }
         }
 
-        // Automatic mouse-leave close trigger
+        // Hover-close disabled to keep things fully stable on laptops
         function closeLexiconDetail() {
-            if (window.matchMedia("(pointer: coarse)").matches) return; 
-            hidePopup();
+            // No action needed here to prevent flickering. Close is handled cleanly by clicks!
         }
 
         // Manual Close trigger (via Close button or Backdrop tap)
@@ -894,6 +945,7 @@
             localStorage.setItem('husband_progress_checks', JSON.stringify(Array.from(checks).map(c => c.checked)));
         }
 
+        // Wife progress tracker function
         function updateWifeProgress() {
             const checks = document.querySelectorAll('.wife-check');
             let checkedCount = 0;
@@ -945,6 +997,7 @@
             setTimeout(() => { toast.classList.add('hidden'); }, 3000);
         }
 
+        // Clear Reflections
         function clearJournalNotes() {
             document.getElementById('husband-notes').value = '';
             document.getElementById('wife-notes').value = '';
