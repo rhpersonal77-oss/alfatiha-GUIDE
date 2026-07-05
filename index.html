@@ -1,0 +1,879 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Fatiha Majestic Study Companion</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkplum: {
+                            50: '#faf5ff',
+                            900: '#1c0c24',
+                            950: '#0f0515',
+                        },
+                        neonpink: {
+                            400: '#f472b6',
+                            500: '#ec4899',
+                            600: '#db2777',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom scrollbars for dark mode beauty */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f0515;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2e103f;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #db2777;
+        }
+    </style>
+</head>
+<body class="bg-darkplum-950 text-purple-100 min-h-screen flex flex-col font-sans selection:bg-neonpink-500 selection:text-white">
+
+    <!-- Warm Glowing Background Accents -->
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-purple-900/20 rounded-full blur-[100px] pointer-events-none"></div>
+    <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-pink-900/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+    <!-- Header Navigation -->
+    <header class="bg-darkplum-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-purple-950">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="bg-gradient-to-tr from-pink-600 to-purple-600 p-2.5 rounded-2xl shadow-lg shadow-pink-500/10 text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="text-lg font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-300">OUR SACRED STUDY SANCTUARY</h1>
+                    <p class="text-[10px] sm:text-xs text-pink-400/80 font-mono tracking-widest uppercase">🧸 Husband & Wife Al-Fatiha Companion 🌸</p>
+                </div>
+            </div>
+            
+            <!-- Navigation Tabs -->
+            <nav class="flex flex-wrap gap-1 bg-darkplum-950 p-1.5 rounded-xl border border-purple-950/60">
+                <button onclick="switchTab('lexicon')" id="tab-lexicon" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-bold transition-all bg-neonpink-600 text-white shadow-md">
+                    📚 Lexicon
+                </button>
+                <button onclick="switchTab('meanings')" id="tab-meanings" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-purple-300 hover:text-white">
+                    ✨ Meanings
+                </button>
+                <button onclick="switchTab('recitation')" id="tab-recitation" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-purple-300 hover:text-white">
+                    🎤 Recitation
+                </button>
+                <button onclick="switchTab('tracker')" id="tab-tracker" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-purple-300 hover:text-white">
+                    🎯 Tracker
+                </button>
+                <button onclick="switchTab('journal')" id="tab-journal" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-purple-300 hover:text-white">
+                    ☕ Journal
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-4xl w-full mx-auto p-4 md:py-8 z-10">
+
+        <!-- TAB 1: INTERACTIVE WORD-BY-WORD LEXICON -->
+        <section id="section-lexicon" class="tab-content block space-y-6">
+            <div class="bg-darkplum-900/60 border border-purple-950 rounded-2xl p-6 shadow-xl">
+                <div class="flex items-center space-x-3 mb-2">
+                    <span class="text-2xl">🧸🌸</span>
+                    <h2 class="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-300">Interactive Verse-by-Verse Lexicon</h2>
+                </div>
+                <p class="text-xs text-purple-300/80 mb-6 leading-relaxed">
+                    This interactive explorer guides us word-by-word through the entire Surah. Click on any Arabic segment to instantly illuminate its exact meaning, prefix, suffix, or pronoun details based on our study notes!
+                </p>
+
+                <!-- Complete Verse Navigation -->
+                <div class="space-y-6">
+                    <!-- Verse 1 -->
+                    <div class="bg-darkplum-950/80 p-5 rounded-xl border border-purple-950/40">
+                        <span class="text-[10px] font-bold text-pink-400 tracking-widest uppercase block mb-3">Verse 1 — The Opening</span>
+                        <div class="flex flex-wrap gap-2">
+                            <button onclick="showWord('Bi')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Bi</button>
+                            <button onclick="showWord('Ismi')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ismi</button>
+                            <button onclick="showWord('Ar-Rahman')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ar-Rahman</button>
+                            <button onclick="showWord('Ar-Raheem')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ar-Raheem</button>
+                        </div>
+                    </div>
+
+                    <!-- Verse 2 -->
+                    <div class="bg-darkplum-950/80 p-5 rounded-xl border border-purple-950/40">
+                        <span class="text-[10px] font-bold text-pink-400 tracking-widest uppercase block mb-3">Verse 2 — All Praise</span>
+                        <div class="flex flex-wrap gap-2">
+                            <button onclick="showWord('Al-hamdu')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Al-hamdu</button>
+                            <button onclick="showWord('Lil-lahee')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Lil-lahee</button>
+                            <button onclick="showWord('Rabb')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Rabb</button>
+                            <button onclick="showWord('Al-Alamin')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Al-'Alamin</button>
+                        </div>
+                    </div>
+
+                    <!-- Verse 3 -->
+                    <div class="bg-darkplum-950/80 p-5 rounded-xl border border-purple-950/40">
+                        <span class="text-[10px] font-bold text-pink-400 tracking-widest uppercase block mb-3">Verse 3 — Attributes of Love</span>
+                        <div class="flex flex-wrap gap-2">
+                            <button onclick="showWord('Ar-Rahman')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ar-Rahman</button>
+                            <button onclick="showWord('Ar-Raheem')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ar-Raheem</button>
+                        </div>
+                    </div>
+
+                    <!-- Verse 4 -->
+                    <div class="bg-darkplum-950/80 p-5 rounded-xl border border-purple-950/40">
+                        <span class="text-[10px] font-bold text-pink-400 tracking-widest uppercase block mb-3">Verse 4 — Sovereignty</span>
+                        <div class="flex flex-wrap gap-2">
+                            <button onclick="showWord('Maliki')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Maliki</button>
+                            <button onclick="showWord('Yawm')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Yawm</button>
+                            <button onclick="showWord('Ad-Deen')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ad-Deen</button>
+                        </div>
+                    </div>
+
+                    <!-- Verse 5 -->
+                    <div class="bg-darkplum-950/80 p-5 rounded-xl border border-purple-950/40">
+                        <span class="text-[10px] font-bold text-pink-400 tracking-widest uppercase block mb-3">Verse 5 — Covenant of worship</span>
+                        <div class="flex flex-wrap gap-2">
+                            <button onclick="showWord('Eyyaka')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Eyyāka</button>
+                            <button onclick="showWord('budu')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">budu</button>
+                            <button onclick="showWord('na')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">na</button>
+                            <button onclick="showWord('Wa')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Wa</button>
+                            <button onclick="showWord('sta-een')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">sta'een</button>
+                        </div>
+                    </div>
+
+                    <!-- Verse 6 -->
+                    <div class="bg-darkplum-950/80 p-5 rounded-xl border border-purple-950/40">
+                        <span class="text-[10px] font-bold text-pink-400 tracking-widest uppercase block mb-3">Verse 6 — Supplication for guidance</span>
+                        <div class="flex flex-wrap gap-2">
+                            <button onclick="showWord('Ehdee')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ehdee</button>
+                            <button onclick="showWord('Sirat')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Sirat</button>
+                            <button onclick="showWord('Mustaqeem')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Mustaqeem</button>
+                        </div>
+                    </div>
+
+                    <!-- Verse 7 -->
+                    <div class="bg-darkplum-950/80 p-5 rounded-xl border border-purple-950/40">
+                        <span class="text-[10px] font-bold text-pink-400 tracking-widest uppercase block mb-3">Verse 7 — The Divided Paths</span>
+                        <div class="flex flex-wrap gap-2">
+                            <button onclick="showWord('Latheena')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Latheena</button>
+                            <button onclick="showWord('An-am')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">An'am</button>
+                            <button onclick="showWord('Ta')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ta</button>
+                            <button onclick="showWord('An-am-ta')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">An'am'ta</button>
+                            <button onclick="showWord('Alayhim')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">'Alayhim</button>
+                            <button onclick="showWord('Ghayri')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ghayri</button>
+                            <button onclick="showWord('Al-Maghdoobi')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Al-Maghdūbi</button>
+                            <button onclick="showWord('Wa')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Wa</button>
+                            <button onclick="showWord('La')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Lā</button>
+                            <button onclick="showWord('Ad-Daleen')" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ad-Daleen</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Glowing Side Drawer Detail View -->
+            <div id="lexicon-detail-card" class="bg-gradient-to-r from-purple-950 to-darkplum-900 border border-pink-500/30 rounded-2xl p-6 shadow-2xl relative overflow-hidden hidden">
+                <div class="absolute top-0 right-0 p-3">
+                    <button onclick="closeLexiconDetail()" class="text-purple-400 hover:text-white transition-all text-sm font-bold">✕ Close</button>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <span class="text-xs uppercase font-mono tracking-widest text-pink-400">Word Analysis</span>
+                        <h3 id="detail-title" class="text-3xl font-serif font-black tracking-wide text-white mt-1">Word</h3>
+                        <p id="detail-meaning" class="text-lg font-bold text-pink-300 italic mt-1"></p>
+                    </div>
+                    <div class="border-t border-purple-900/60 pt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="text-xs font-bold text-purple-400 uppercase tracking-widest">Type / Structural Classification</h4>
+                            <p id="detail-type" class="text-sm font-semibold text-white mt-1"></p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-purple-400 uppercase tracking-widest">Study Notes & Breakdown</h4>
+                            <p id="detail-breakdown" class="text-xs text-purple-200 leading-relaxed mt-1"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="lexicon-placeholder" class="p-5 text-center bg-darkplum-900/30 rounded-xl border border-purple-950/40 text-purple-400 text-xs">
+                💡 Tap any of the Arabic word buttons above to view its detailed breakdown!
+            </div>
+        </section>
+
+        <!-- TAB 2: SPIRITUAL MEANINGS & TAFSIR INSIGHTS -->
+        <section id="section-meanings" class="tab-content hidden space-y-6">
+            <div class="bg-darkplum-900/60 border border-purple-950 rounded-2xl p-6 shadow-xl space-y-6">
+                <div class="flex items-center space-x-3">
+                    <span class="text-2xl">✨</span>
+                    <h2 class="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-300">Spiritual Translations & Meaning Deep-Dives</h2>
+                </div>
+                <p class="text-xs text-purple-300/80 leading-relaxed">
+                    Surah Al-Fatiha is not just words—it's a spiritual dialogue between us and Allah. Here is the complete flow, connecting literal translation with deeper heart-felt lessons.
+                </p>
+
+                <!-- Verse Cards with Tafsir -->
+                <div class="space-y-4">
+                    <!-- Card 1 -->
+                    <div class="bg-darkplum-950/70 border border-purple-950/80 p-5 rounded-xl hover:border-pink-500/20 transition-all space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-extrabold text-pink-400 font-mono tracking-widest uppercase">Verse 1</span>
+                            <span class="text-[10px] bg-purple-900/50 text-purple-300 px-2 py-0.5 rounded-full font-bold">The Foundation</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Bi-Ismi Ar-Rahman Ar-Raheem</h4>
+                        <p class="text-sm text-pink-300/90 font-medium italic">"In the Name of Allah, the Most Merciful, the Most Gracious"</p>
+                        <p class="text-xs text-purple-200/80 leading-relaxed pt-2 border-t border-purple-950/40">
+                            <strong>Heart Reflection:</strong> We begin everything in His Name to seek blessings. In our notes, we emphasize that <em>Ar-Rahman</em> is His sweeping, infinite mercy for everyone, and <em>Ar-Raheem</em> is His intimate grace specifically tailored to guide us.
+                        </p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-darkplum-950/70 border border-purple-950/80 p-5 rounded-xl hover:border-pink-500/20 transition-all space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-extrabold text-pink-400 font-mono tracking-widest uppercase">Verse 2</span>
+                            <span class="text-[10px] bg-purple-900/50 text-purple-300 px-2 py-0.5 rounded-full font-bold">The Gratitude</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Al-hamdu Lil-lahee Rabb Al-'Alamin</h4>
+                        <p class="text-sm text-pink-300/90 font-medium italic">"All praise belongs to Allah, Lord of the worlds (all creations)"</p>
+                        <p class="text-xs text-purple-200/80 leading-relaxed pt-2 border-t border-purple-950/40">
+                            <strong>Heart Reflection:</strong> "Al-hamdu" represents total praise accompanied by love and deep gratitude. He is the "Rabb"—the Sustainer who grows, protects, and lovingly shapes all of creation from inception to completion.
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-darkplum-950/70 border border-purple-950/80 p-5 rounded-xl hover:border-pink-500/20 transition-all space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-extrabold text-pink-400 font-mono tracking-widest uppercase">Verse 3</span>
+                            <span class="text-[10px] bg-purple-900/50 text-purple-300 px-2 py-0.5 rounded-full font-bold">The Mercy</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Ar-Rahman Ar-Raheem</h4>
+                        <p class="text-sm text-pink-300/90 font-medium italic">"The Most Merciful, the Most Gracious"</p>
+                        <p class="text-xs text-purple-200/80 leading-relaxed pt-2 border-t border-purple-950/40">
+                            <strong>Heart Reflection:</strong> Repeated immediately to remind us that His authority and sovereignty are entirely rooted in overflowing mercy. He wants us to come to Him out of love, not fear.
+                        </p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bg-darkplum-950/70 border border-purple-950/80 p-5 rounded-xl hover:border-pink-500/20 transition-all space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-extrabold text-pink-400 font-mono tracking-widest uppercase">Verse 4</span>
+                            <span class="text-[10px] bg-purple-900/50 text-purple-300 px-2 py-0.5 rounded-full font-bold">The Sovereignty</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Maliki Yawm Ad-Deen</h4>
+                        <p class="text-sm text-pink-300/90 font-medium italic">"Master of the Day of Judgment"</p>
+                        <p class="text-xs text-purple-200/80 leading-relaxed pt-2 border-t border-purple-950/40">
+                            <strong>Heart Reflection:</strong> Gives us perspective on ultimate accountability. On the Day of Judgment, all worldly titles fade away and only His sovereignty and our sincere deeds remain.
+                        </p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="bg-darkplum-950/70 border border-purple-950/80 p-5 rounded-xl hover:border-pink-500/20 transition-all space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-extrabold text-pink-400 font-mono tracking-widest uppercase">Verse 5</span>
+                            <span class="text-[10px] bg-purple-900/50 text-purple-300 px-2 py-0.5 rounded-full font-bold">The Covenant</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Eyyāka na'budu wa eyyāka nasta'een</h4>
+                        <p class="text-sm text-pink-300/90 font-medium italic">"You alone we worship and You alone we seek help"</p>
+                        <p class="text-xs text-purple-200/80 leading-relaxed pt-2 border-t border-purple-950/40">
+                            <strong>Heart Reflection:</strong> This is the turning point of the Surah. We state our exclusivity to Him. We worship first (na'budu) and then ask for help (nasta'een), realizing we can't even worship Him without His divine help.
+                        </p>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="bg-darkplum-950/70 border border-purple-950/80 p-5 rounded-xl hover:border-pink-500/20 transition-all space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-extrabold text-pink-400 font-mono tracking-widest uppercase">Verse 6</span>
+                            <span class="text-[10px] bg-purple-900/50 text-purple-300 px-2 py-0.5 rounded-full font-bold">The Request</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Ehdina Sirat Al-Mustaqeem</h4>
+                        <p class="text-sm text-pink-300/90 font-medium italic">"Guide us to the straight path"</p>
+                        <p class="text-xs text-purple-200/80 leading-relaxed pt-2 border-t border-purple-950/40">
+                            <strong>Heart Reflection:</strong> The ultimate prayer. Out of all the things in the universe we could ask for, we ask for guidance. The straight path is the shortest, clearest distance to His pleasure.
+                        </p>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="bg-darkplum-950/70 border border-purple-950/80 p-5 rounded-xl hover:border-pink-500/20 transition-all space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-extrabold text-pink-400 font-mono tracking-widest uppercase">Verse 7</span>
+                            <span class="text-[10px] bg-purple-900/50 text-purple-300 px-2 py-0.5 rounded-full font-bold">The Destination</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Sirat Al-Latheena an'amta 'alayhim ghayril-maghdoobi 'alayhim walad-daleen</h4>
+                        <p class="text-sm text-pink-300/90 font-medium italic">"The path of those whom You bestowed blessings upon them, not of those who earned anger upon them, and not of those who went astray"</p>
+                        <p class="text-xs text-purple-200/80 leading-relaxed pt-2 border-t border-purple-950/40">
+                            <strong>Heart Reflection:</strong> We ask to be with those who received His gifts and stayed upright. We pray to avoid those who knew the truth but acted against it (earning anger), and those who acted without knowledge (going astray).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 3: RECITATION, PRONUNCIATION & TAJWEED COMPANION -->
+        <section id="section-recitation" class="tab-content hidden space-y-6">
+            <div class="bg-darkplum-900/60 border border-purple-950 rounded-2xl p-6 shadow-xl space-y-6">
+                <div class="flex items-center space-x-3">
+                    <span class="text-2xl">🎤</span>
+                    <h2 class="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-300">Recitation & Tajweed Guide</h2>
+                </div>
+                <p class="text-xs text-purple-300/80 leading-relaxed">
+                    To beautify our recitation together, let’s focus on the most important letters and tajweed rules in this Surah. Here are the key mouth-articulators and focus points!
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Rule 1: The Ayn -->
+                    <div class="bg-darkplum-950/60 border border-purple-950 p-5 rounded-xl space-y-2">
+                        <div class="flex items-center space-x-2 text-pink-400 font-bold text-sm">
+                            <span class="p-1 bg-pink-950/50 rounded-lg">ع</span>
+                            <span>The Letter 'Ayn (ع)</span>
+                        </div>
+                        <p class="text-xs text-purple-200 leading-relaxed">
+                            <strong>Found in:</strong> <em>Al-'Alamin</em> and <em>nasta'een</em>.
+                        </p>
+                        <p class="text-xs text-purple-300/80 leading-relaxed">
+                            <strong>How to recite:</strong> This letter comes from the middle of the throat. It is a smooth squeeze, not a harsh choke. Make sure not to pronounce it like a simple "A" or "I" sound. Squeeze slightly to get that beautiful middle-throat resonance.
+                        </p>
+                    </div>
+
+                    <!-- Rule 2: The Haa -->
+                    <div class="bg-darkplum-950/60 border border-purple-950 p-5 rounded-xl space-y-2">
+                        <div class="flex items-center space-x-2 text-pink-400 font-bold text-sm">
+                            <span class="p-1 bg-pink-950/50 rounded-lg">ح</span>
+                            <span>The Sharp 'Haa' (ح)</span>
+                        </div>
+                        <p class="text-xs text-purple-200 leading-relaxed">
+                            <strong>Found in:</strong> <em>Al-hamdu</em>, <em>Ar-Rahman</em>, and <em>Ar-Raheem</em>.
+                        </p>
+                        <p class="text-xs text-purple-300/80 leading-relaxed">
+                            <strong>How to recite:</strong> This is a crisp, breathy "H" sound that also originates from the middle throat, like sighing or blowing warm steam onto a glass window. It is distinct from the soft, deep chest 'Haa' (ه).
+                        </p>
+                    </div>
+
+                    <!-- Rule 3: The Daad -->
+                    <div class="bg-darkplum-950/60 border border-purple-950 p-5 rounded-xl space-y-2">
+                        <div class="flex items-center space-x-2 text-pink-400 font-bold text-sm">
+                            <span class="p-1 bg-pink-950/50 rounded-lg">ض</span>
+                            <span>The Letter 'Daad' (ض)</span>
+                        </div>
+                        <p class="text-xs text-purple-200 leading-relaxed">
+                            <strong>Found in:</strong> <em>Al-Maghdoobi</em> and <em>ad-Daleen</em>.
+                        </p>
+                        <p class="text-xs text-purple-300/80 leading-relaxed">
+                            <strong>How to recite:</strong> Universally known as the most unique letter in Arabic. Touch the side/edge of your tongue against your upper molars. It has a heavy, echoing, elongated quality. Avoid letting it turn into a simple English "D".
+                        </p>
+                    </div>
+
+                    <!-- Rule 4: The Madd -->
+                    <div class="bg-darkplum-950/60 border border-purple-950 p-5 rounded-xl space-y-2">
+                        <div class="flex items-center space-x-2 text-pink-400 font-bold text-sm">
+                            <span class="p-1 bg-pink-950/50 rounded-lg">~</span>
+                            <span>Long Madd (Stretching)</span>
+                        </div>
+                        <p class="text-xs text-purple-200 leading-relaxed">
+                            <strong>Found in:</strong> <em>Ad-Daleen</em> (ولا الضَّالِّين).
+                        </p>
+                        <p class="text-xs text-purple-300/80 leading-relaxed">
+                            <strong>How to recite:</strong> This contains a heavy, compulsory 6-count stretch (Madd Lazim) due to the shaddah on the Laam. Stretch the "Aa" beautifully, then merge smoothly into the double "L" sound with emphasis!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-purple-950/30 border border-purple-900 rounded-xl text-center text-xs text-pink-300 font-mono">
+                    🌸 Recitation tip for us: Let's take turns reciting one verse each tonight! 🧸
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 4: INTERACTIVE MEMORIZATION TRACKER -->
+        <section id="section-tracker" class="tab-content hidden space-y-6">
+            <div class="bg-darkplum-900/60 border border-purple-950 rounded-2xl p-6 shadow-xl space-y-8">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <span class="text-2xl">🎯</span>
+                        <h2 class="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-300">Our Progress Tracker</h2>
+                    </div>
+                    <button onclick="resetTracker()" class="text-[10px] font-bold text-pink-400 hover:underline tracking-wider uppercase">Reset All</button>
+                </div>
+
+                <!-- Live Progress Gauges -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Husband progress -->
+                    <div class="bg-darkplum-950/80 p-5 rounded-xl border border-purple-950/40 space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs font-bold text-pink-300 flex items-center gap-1.5">
+                                <span>🧸</span> Husband's Goal
+                            </span>
+                            <span id="husband-percentage" class="text-xs font-mono font-bold text-white">0%</span>
+                        </div>
+                        <div class="w-full bg-purple-950/50 h-3 rounded-full overflow-hidden border border-purple-900/40">
+                            <div id="husband-progress-bar" class="progress-bar-fill h-full bg-gradient-to-r from-pink-500 to-purple-500 w-0"></div>
+                        </div>
+                        <p class="text-[10px] text-purple-300 italic">"Step-by-step, building a beautiful connection with the Book of Allah."</p>
+                    </div>
+
+                    <!-- Wife progress -->
+                    <div class="bg-darkplum-950/80 p-5 rounded-xl border border-purple-950/40 space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs font-bold text-pink-300 flex items-center gap-1.5">
+                                <span>🌸</span> Wife's Goal
+                            </span>
+                            <span id="wife-percentage" class="text-xs font-mono font-bold text-white">0%</span>
+                        </div>
+                        <div class="w-full bg-purple-950/50 h-3 rounded-full overflow-hidden border border-purple-900/40">
+                            <div id="wife-progress-bar" class="progress-bar-fill h-full bg-gradient-to-r from-pink-500 to-purple-500 w-0"></div>
+                        </div>
+                        <p class="text-[10px] text-purple-300 italic">"Every verse we lock in our hearts lights up our paths."</p>
+                    </div>
+                </div>
+
+                <!-- Checkpoint lists -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Husband Checklist -->
+                    <div class="space-y-3">
+                        <h3 class="text-xs font-black text-pink-400 tracking-wider uppercase border-b border-purple-950 pb-2">🧸 Husband's Checkpoints</h3>
+                        <div class="space-y-2">
+                            <label class="flex items-center space-x-3 p-3 bg-darkplum-950/50 border border-purple-950 rounded-lg cursor-pointer hover:border-pink-500/20 transition-all select-none">
+                                <input type="checkbox" onchange="updateHusbandProgress()" class="husband-check w-4 h-4 rounded text-pink-600 bg-darkplum-900 border-purple-900 focus:ring-0 focus:ring-offset-0">
+                                <span class="text-xs font-bold text-purple-200">Verse 1 Memorized</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 bg-darkplum-950/50 border border-purple-950 rounded-lg cursor-pointer hover:border-pink-500/20 transition-all select-none">
+                                <input type="checkbox" onchange="updateHusbandProgress()" class="husband-check w-4 h-4 rounded text-pink-600 bg-darkplum-900 border-purple-900 focus:ring-0 focus:ring-offset-0">
+                                <span class="text-xs font-bold text-purple-200">Verses 2-4 Memorized</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 bg-darkplum-950/50 border border-purple-950 rounded-lg cursor-pointer hover:border-pink-500/20 transition-all select-none">
+                                <input type="checkbox" onchange="updateHusbandProgress()" class="husband-check w-4 h-4 rounded text-pink-600 bg-darkplum-900 border-purple-900 focus:ring-0 focus:ring-offset-0">
+                                <span class="text-xs font-bold text-purple-200">Verses 5-6 Memorized</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 bg-darkplum-950/50 border border-purple-950 rounded-lg cursor-pointer hover:border-pink-500/20 transition-all select-none">
+                                <input type="checkbox" onchange="updateHusbandProgress()" class="husband-check w-4 h-4 rounded text-pink-600 bg-darkplum-900 border-purple-900 focus:ring-0 focus:ring-offset-0">
+                                <span class="text-xs font-bold text-purple-200">Verse 7 Memorized</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 bg-darkplum-950/50 border border-purple-950 rounded-lg cursor-pointer hover:border-pink-500/20 transition-all select-none">
+                                <input type="checkbox" onchange="updateHusbandProgress()" class="husband-check w-4 h-4 rounded text-pink-600 bg-darkplum-900 border-purple-900 focus:ring-0 focus:ring-offset-0">
+                                <span class="text-xs font-bold text-purple-200">Full Tajweed Fluency Verified</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Wife Checklist -->
+                    <div class="space-y-3">
+                        <h3 class="text-xs font-black text-pink-400 tracking-wider uppercase border-b border-purple-950 pb-2">🌸 Wife's Checkpoints</h3>
+                        <div class="space-y-2">
+                            <label class="flex items-center space-x-3 p-3 bg-darkplum-950/50 border border-purple-950 rounded-lg cursor-pointer hover:border-pink-500/20 transition-all select-none">
+                                <input type="checkbox" onchange="updateWifeProgress()" class="wife-check w-4 h-4 rounded text-pink-600 bg-darkplum-900 border-purple-900 focus:ring-0 focus:ring-offset-0">
+                                <span class="text-xs font-bold text-purple-200">Verse 1 Memorized</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 bg-darkplum-950/50 border border-purple-950 rounded-lg cursor-pointer hover:border-pink-500/20 transition-all select-none">
+                                <input type="checkbox" onchange="updateWifeProgress()" class="wife-check w-4 h-4 rounded text-pink-600 bg-darkplum-900 border-purple-900 focus:ring-0 focus:ring-offset-0">
+                                <span class="text-xs font-bold text-purple-200">Verses 2-4 Memorized</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 bg-darkplum-950/50 border border-purple-950 rounded-lg cursor-pointer hover:border-pink-500/20 transition-all select-none">
+                                <input type="checkbox" onchange="updateWifeProgress()" class="wife-check w-4 h-4 rounded text-pink-600 bg-darkplum-900 border-purple-900 focus:ring-0 focus:ring-offset-0">
+                                <span class="text-xs font-bold text-purple-200">Verses 5-6 Memorized</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 bg-darkplum-950/50 border border-purple-950 rounded-lg cursor-pointer hover:border-pink-500/20 transition-all select-none">
+                                <input type="checkbox" onchange="updateWifeProgress()" class="wife-check w-4 h-4 rounded text-pink-600 bg-darkplum-900 border-purple-900 focus:ring-0 focus:ring-offset-0">
+                                <span class="text-xs font-bold text-purple-200">Verse 7 Memorized</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 bg-darkplum-950/50 border border-purple-950 rounded-lg cursor-pointer hover:border-pink-500/20 transition-all select-none">
+                                <input type="checkbox" onchange="updateWifeProgress()" class="wife-check w-4 h-4 rounded text-pink-600 bg-darkplum-900 border-purple-900 focus:ring-0 focus:ring-offset-0">
+                                <span class="text-xs font-bold text-purple-200">Full Tajweed Fluency Verified</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 5: OUR STUDY JOURNAL -->
+        <section id="section-journal" class="tab-content hidden space-y-6">
+            <div class="bg-darkplum-900/60 border border-purple-950 rounded-2xl p-6 shadow-xl space-y-6">
+                <div class="flex items-center space-x-3">
+                    <span class="text-2xl">☕ Journal</span>
+                    <h2 class="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-300">Our Cozy Study Journal</h2>
+                </div>
+                <p class="text-xs text-purple-300/80 leading-relaxed">
+                    Grab a warm drink and use this collaborative space to reflect together. Answer these prompts to deepen your connection with the Surah and with each other. Click "Save Notes" to keep your reflections active on this device!
+                </p>
+
+                <!-- Current Study Prompt Generator -->
+                <div class="bg-darkplum-950 border border-purple-950/80 p-5 rounded-xl space-y-3 relative overflow-hidden">
+                    <div class="absolute -top-6 -right-6 w-24 h-24 bg-pink-500/10 rounded-full blur-xl"></div>
+                    <span class="text-[10px] font-black text-pink-400 font-mono tracking-widest uppercase block">Tonight's Couple Reflection Prompt</span>
+                    <h3 id="journal-prompt-display" class="text-sm font-bold text-white">"How can we practice the mercy of Ar-Rahman Ar-Raheem with each other in our daily lives?"</h3>
+                    <button onclick="generateNewPrompt()" class="text-xs text-pink-400 hover:text-pink-300 font-bold underline transition-all">Generate New Prompt 🔄</button>
+                </div>
+
+                <!-- Text entry boxes -->
+                <div class="space-y-4">
+                    <div class="space-y-2">
+                        <label for="husband-notes" class="block text-xs font-bold text-purple-300 flex items-center gap-1.5">
+                            <span>🧸</span> Husband's Reflections:
+                        </label>
+                        <textarea id="husband-notes" rows="4" placeholder="Type your personal insights or answers to the prompt here..." class="w-full p-4 bg-darkplum-950 border border-purple-900/50 rounded-xl text-xs text-purple-100 focus:outline-none focus:border-pink-500 transition-all placeholder:text-purple-400/40"></textarea>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label for="wife-notes" class="block text-xs font-bold text-purple-300 flex items-center gap-1.5">
+                            <span>🌸</span> Wife's Reflections:
+                        </label>
+                        <textarea id="wife-notes" rows="4" placeholder="Type your personal insights or answers to the prompt here..." class="w-full p-4 bg-darkplum-950 border border-purple-900/50 rounded-xl text-xs text-purple-100 focus:outline-none focus:border-pink-500 transition-all placeholder:text-purple-400/40"></textarea>
+                    </div>
+                </div>
+
+                <div class="flex gap-3">
+                    <button onclick="saveJournalNotes()" class="flex-1 py-3 bg-neonpink-600 hover:bg-neonpink-500 text-white font-extrabold rounded-xl text-xs transition-all shadow-md">
+                        💾 Save Notes
+                    </button>
+                    <button onclick="clearJournalNotes()" class="py-3 px-5 bg-darkplum-950 border border-purple-900 text-purple-300 hover:bg-purple-950 text-xs font-bold rounded-xl transition-all">
+                        Clear Fields
+                    </button>
+                </div>
+                
+                <div id="journal-toast" class="p-3 bg-green-500/20 border border-green-500 text-green-300 rounded-lg text-xs font-bold text-center hidden">
+                    🎉 Reflections saved to this device's memory!
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-darkplum-900/40 border-t border-purple-950/60 py-6 mt-12 text-center text-xs text-purple-300/60">
+        <div class="max-w-4xl mx-auto px-4 space-y-2">
+            <p>Made with love, dedication, and custom translations for our Quran study sessions. ❤️</p>
+            <p>&copy; 202 study companion suite.</p>
+        </div>
+    </footer>
+
+    <!-- JS Logic Core -->
+    <script>
+        // Tab system
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById(`section-${tabId}`).classList.remove('hidden');
+
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.className = "tab-btn px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-purple-300 hover:text-white";
+            });
+
+            const activeBtn = document.getElementById(`tab-${tabId}`);
+            activeBtn.className = "tab-btn px-3 py-1.5 rounded-lg text-xs font-bold transition-all bg-neonpink-600 text-white shadow-md";
+        }
+
+        // Exact morphological dictionary matching our specific definitions
+        const dictionary = {
+            "Bi": {
+                word: "Bi (بِ)",
+                meaning: "In",
+                type: "Prefix / Grammatical Particle",
+                breakdown: "A core preposition prefix in our notes meaning 'In', used to start the Surah with seeking assistance or companionship."
+            },
+            "Ismi": {
+                word: "Ismi (اسْمِ)",
+                meaning: "Name",
+                type: "Noun",
+                breakdown: "Derived from the root meaning elevation or designation. When joined with 'Bi', it forms 'In the Name'."
+            },
+            "Ar-Rahman": {
+                word: "Ar-Rahman (الرَّحْمَٰنِ)",
+                meaning: "Most Merciful",
+                type: "Divine Attribute Noun",
+                breakdown: "Aligned strictly with our updated notes: 'Most Merciful'. Denotes Allah's expansive, universal mercy."
+            },
+            "Ar-Raheem": {
+                word: "Ar-Raheem (الرَّحِيمِ)",
+                meaning: "Most Gracious",
+                type: "Divine Attribute Noun",
+                breakdown: "Aligned strictly with our updated notes: 'Most Gracious'. Reflects His intimate, focused mercy and continuous guidance."
+            },
+            "Al-hamdu": {
+                word: "Al-hamdu (الْحَمْدُ)",
+                meaning: "All praise",
+                type: "Noun Phrase",
+                breakdown: "Consists of 'Al' (All / The / Those) + 'Hamdu' (Praise). Represents absolute gratitude combined with love."
+            },
+            "Lil-lahee": {
+                word: "Lil-lahee (لِلَّهِ)",
+                meaning: "Belongs to Allah",
+                type: "Prepositional Phrase",
+                breakdown: "Consists of 'Lil' (Belongs to) + proper name 'Allah'. Highlights that all true gratitude returns to Him alone."
+            },
+            "Rabb": {
+                word: "Rabb (رَبِّ)",
+                meaning: "Lord",
+                type: "Noun",
+                breakdown: "Means Lord, Master, and Sustainer. The ultimate caretaker who grows and nurtures all creations."
+            },
+            "Al-Alamin": {
+                word: "Al-'Alamin (الْعَالَمِينَ)",
+                meaning: "ALL, the worlds (all creations)",
+                type: "Plural Noun",
+                breakdown: "Formed of 'Al' (The / All) + 'Alamin' (Worlds). Represents every single created entity and dimension."
+            },
+            "Maliki": {
+                word: "Māliki (مَالِكِ)",
+                meaning: "Master",
+                type: "Noun / Title",
+                breakdown: "The Sovereign King and ultimate owner who possesses total control and authority."
+            },
+            "Yawm": {
+                word: "Yawm (يَوْمِ)",
+                meaning: "Day",
+                type: "Noun",
+                breakdown: "Refers to a specific span of time, pointing specifically to the final hour of judgment."
+            },
+            "Ad-Deen": {
+                word: "Ad-Deen (الدِّينِ)",
+                meaning: "Judgment",
+                type: "Noun",
+                breakdown: "Represents system, path, or final accountability/reckoning day."
+            },
+            "Eyyaka": {
+                word: "Eyyāka (إِيَّاكَ)",
+                meaning: "You alone",
+                type: "Exclusive Personal Pronoun",
+                breakdown: "Used specifically to lock focus. In grammar, placing this first represents absolute exclusivity (Only You!)."
+            },
+            "budu": {
+                word: "budu (بُدُ)",
+                meaning: "worship",
+                type: "Verb Stem",
+                breakdown: "Corresponds to complete, loving submission and ultimate devotion."
+            },
+            "na": {
+                word: "na (نَ)",
+                meaning: "We / us",
+                type: "Pronoun Suffix / Prefix",
+                breakdown: "Plural first person pronoun. Highlights our community aspect in worship."
+            },
+            "Wa": {
+                word: "Wa (وَ)",
+                meaning: "And",
+                type: "Conjunction",
+                breakdown: "Standard coordinator joining the two balanced halves of Verse 5 and Verse 7."
+            },
+            "sta-een": {
+                word: "sta'een (سْتَعِينُ)",
+                meaning: "We seek help",
+                type: "Verb Complex",
+                breakdown: "Derived from seeking aid or assistance. Combined with prefix 'na' to mean 'We seek help'."
+            },
+            "Ehdee": {
+                word: "Ehdee (اهْدِ)",
+                meaning: "Guide",
+                type: "Imperative Verb (Supplication)",
+                breakdown: "Our direct prayer requesting to be shown, directed, and kept on the straight path."
+            },
+            "Sirat": {
+                word: "Sirāt (صِرَاطَ)",
+                meaning: "path",
+                type: "Noun",
+                breakdown: "A clear, wide path leading directly to a desired destination."
+            },
+            "Mustaqeem": {
+                word: "Mustaqeem (الْمُسْتَقِيمَ)",
+                meaning: "straight",
+                type: "Adjective",
+                breakdown: "Describes a route without bends, curves, or shortcuts."
+            },
+            "Latheena": {
+                word: "Latheena (الَّذِينَ)",
+                meaning: "those who",
+                type: "Relative Pronoun",
+                breakdown: "Plural masculine pronoun designating a specific group of people."
+            },
+            "An-am": {
+                word: "An'am (أَنْعَمْ)",
+                meaning: "Bestowed Blessings",
+                type: "Verb Stem",
+                breakdown: "Refers to showering favors, grace, and direct spiritual gifts."
+            },
+            "Ta": {
+                word: "Ta (تَ)",
+                meaning: "You / Your",
+                type: "Pronoun Suffix",
+                breakdown: "Aligned strictly with our updated notes: 'You / Your'. Points back to the giver of blessings (Allah)."
+            },
+            "An-am-ta": {
+                word: "An'am'ta (أَنْعَمْتَ)",
+                meaning: "your bestowed blessings / bestowed blessings from you",
+                type: "Verb Complex",
+                breakdown: "Combines 'An'am' (Bestowed Blessings) + 'Ta' (You / Your) to highlight His exclusive gifts."
+            },
+            "Alayhim": {
+                word: "'Alayhim (عَلَيْهِمْ)",
+                meaning: "Upon them",
+                type: "Prepositional Phrase",
+                breakdown: "Formed of preposition 'Alay' (Upon) + suffix 'him' (Them)."
+            },
+            "Ghayri": {
+                word: "Ghayri (غَيْرِ)",
+                meaning: "Not / Other than",
+                type: "Particle",
+                breakdown: "Exclusion particle defining the absolute boundary of paths we want to avoid."
+            },
+            "Al-Maghdoobi": {
+                word: "Al-Maghdūbi (الْمَغْضُوبِ)",
+                meaning: "Those who earned anger",
+                type: "Passive Participle",
+                breakdown: "Refers to those who recognized the truth but consciously acted against it."
+            },
+            "La": {
+                word: "Lā (لَا)",
+                meaning: "Not / No",
+                type: "Negative Particle",
+                breakdown: "Double negation added for deep emphasis before mentioning 'Ad-Daleen'."
+            },
+            "Ad-Daleen": {
+                word: "Ad-Daleen (الضَّالِّينَ)",
+                meaning: "Those who went astray",
+                type: "Plural Active Participle",
+                breakdown: "Refers to those who acted or worshiped without knowledge, losing the true course."
+            }
+        };
+
+        // Lexicon Explorer function
+        function showWord(wordKey) {
+            const data = dictionary[wordKey];
+            if (!data) return;
+
+            document.getElementById('lexicon-placeholder').classList.add('hidden');
+            const card = document.getElementById('lexicon-detail-card');
+            card.classList.remove('hidden');
+
+            document.getElementById('detail-title').textContent = data.word;
+            document.getElementById('detail-meaning').textContent = `= ${data.meaning}`;
+            document.getElementById('detail-type').textContent = data.type;
+            document.getElementById('detail-breakdown').textContent = data.breakdown;
+
+            // highlight active buttons
+            document.querySelectorAll('.lex-word-btn').forEach(btn => {
+                btn.className = "lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all";
+            });
+            event.target.className = "lex-word-btn px-3.5 py-2 rounded-lg bg-pink-950/40 border border-pink-500 text-pink-300 text-xs font-bold transition-all shadow-md shadow-pink-500/10";
+        }
+
+        function closeLexiconDetail() {
+            document.getElementById('lexicon-detail-card').classList.add('hidden');
+            document.getElementById('lexicon-placeholder').classList.remove('hidden');
+            document.querySelectorAll('.lex-word-btn').forEach(btn => {
+                btn.className = "lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all";
+            });
+        }
+
+        // Memorization tracker functions
+        function updateHusbandProgress() {
+            const checks = document.querySelectorAll('.husband-check');
+            let checkedCount = 0;
+            checks.forEach(chk => { if (chk.checked) checkedCount++; });
+            const percentage = Math.round((checkedCount / checks.length) * 100);
+            
+            document.getElementById('husband-percentage').textContent = `${percentage}%`;
+            document.getElementById('husband-progress-bar').style.width = `${percentage}%`;
+            
+            // Save state
+            localStorage.setItem('husband_progress_checks', JSON.stringify(Array.from(checks).map(c => c.checked)));
+        }
+
+        function updateWifeProgress() {
+            const checks = document.querySelectorAll('.wife-check');
+            let checkedCount = 0;
+            checks.forEach(chk => { if (chk.checked) checkedCount++; });
+            const percentage = Math.round((checkedCount / checks.length) * 100);
+            
+            document.getElementById('wife-percentage').textContent = `${percentage}%`;
+            document.getElementById('wife-progress-bar').style.width = `${percentage}%`;
+
+            // Save state
+            localStorage.setItem('wife_progress_checks', JSON.stringify(Array.from(checks).map(c => c.checked)));
+        }
+
+        function resetTracker() {
+            document.querySelectorAll('.husband-check').forEach(c => c.checked = false);
+            document.querySelectorAll('.wife-check').forEach(c => c.checked = false);
+            updateHusbandProgress();
+            updateWifeProgress();
+        }
+
+        // Journal reflection prompt lists
+        const studyPrompts = [
+            "How can we practice the mercy of Ar-Rahman Ar-Raheem with each other in our daily lives?",
+            "Worship is exclusive to Allah. What are some distractions we can help each other eliminate to improve our prayer focus?",
+            "Sustaining and growing are parts of 'Rabb'. How has Allah nurtured our marriage and spiritual growth this past year?",
+            "When we ask to be guided to 'Sirat Al-Mustaqeem', what is one collective habit we should start doing today?",
+            "Verse 7 talks about those who received blessings. Who is a role model from Quran history we both want to learn more about?"
+        ];
+
+        function generateNewPrompt() {
+            const current = document.getElementById('journal-prompt-display').textContent;
+            let next = current;
+            while (next === current) {
+                const idx = Math.floor(Math.random() * studyPrompts.length);
+                next = `"${studyPrompts[idx]}"`;
+            }
+            document.getElementById('journal-prompt-display').textContent = next;
+        }
+
+        // Persistence of Journal Reflections
+        function saveJournalNotes() {
+            const hNotes = document.getElementById('husband-notes').value;
+            const wNotes = document.getElementById('wife-notes').value;
+            localStorage.setItem('fatiha_husband_journal', hNotes);
+            localStorage.setItem('fatiha_wife_journal', wNotes);
+
+            const toast = document.getElementById('journal-toast');
+            toast.classList.remove('hidden');
+            setTimeout(() => { toast.classList.add('hidden'); }, 3000);
+        }
+
+        function clearJournalNotes() {
+            document.getElementById('husband-notes').value = '';
+            document.getElementById('wife-notes').value = '';
+            localStorage.removeItem('fatiha_husband_journal');
+            localStorage.removeItem('fatiha_wife_journal');
+        }
+
+        // Load saved states
+        window.onload = function() {
+            // Load progress check values
+            const hSaved = JSON.parse(localStorage.getItem('husband_progress_checks'));
+            if (hSaved) {
+                const hChecks = document.querySelectorAll('.husband-check');
+                hSaved.forEach((val, idx) => { if(hChecks[idx]) hChecks[idx].checked = val; });
+                updateHusbandProgress();
+            }
+            const wSaved = JSON.parse(localStorage.getItem('wife_progress_checks'));
+            if (wSaved) {
+                const wChecks = document.querySelectorAll('.wife-check');
+                wSaved.forEach((val, idx) => { if(wChecks[idx]) wChecks[idx].checked = val; });
+                updateWifeProgress();
+            }
+
+            // Load saved notes
+            const savedHNotes = localStorage.getItem('fatiha_husband_journal');
+            const savedWNotes = localStorage.getItem('fatiha_wife_journal');
+            if (savedHNotes) document.getElementById('husband-notes').value = savedHNotes;
+            if (savedWNotes) document.getElementById('wife-notes').value = savedWNotes;
+        }
+    </script>
+</body>
+</html>
+
+```
