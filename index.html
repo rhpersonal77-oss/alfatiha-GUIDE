@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
@@ -34,59 +35,59 @@
         }
         /* Custom scrollbars for dark mode beauty */
         ::-webkit-scrollbar {
-            width: 8px;
+            width: 10px;
         }
         ::-webkit-scrollbar-track {
             background: #0f0515;
         }
         ::-webkit-scrollbar-thumb {
             background: #2e103f;
-            border-radius: 4px;
+            border-radius: 5px;
         }
         ::-webkit-scrollbar-thumb:hover {
             background: #db2777;
         }
     </style>
 </head>
-<body class="bg-darkplum-950 text-purple-100 min-h-screen flex flex-col font-sans selection:bg-neonpink-500 selection:text-white">
+<body class="bg-darkplum-950 text-purple-100 min-h-screen flex flex-col font-sans selection:bg-neonpink-500 selection:text-white text-base md:text-lg">
 
     <!-- Warm Glowing Background Accents -->
     <div class="absolute top-0 left-1/4 w-96 h-96 bg-purple-900/20 rounded-full blur-[100px] pointer-events-none"></div>
     <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-pink-900/10 rounded-full blur-[100px] pointer-events-none"></div>
 
     <!-- Header Navigation -->
-    <header class="bg-darkplum-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-purple-950">
-        <div class="max-w-5xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div class="flex items-center space-x-3">
-                <div class="bg-gradient-to-tr from-pink-600 to-purple-600 p-2.5 rounded-2xl shadow-lg shadow-pink-500/10 text-white">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <header class="bg-darkplum-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-purple-950 shadow-md">
+        <div class="max-w-6xl mx-auto px-6 py-5 flex flex-col lg:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-4">
+                <div class="bg-gradient-to-tr from-pink-600 to-purple-600 p-3 rounded-2xl shadow-lg shadow-pink-500/10 text-white">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                     </svg>
                 </div>
                 <div>
-                    <h1 class="text-lg font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-300">OUR SACRED STUDY SANCTUARY</h1>
-                    <p class="text-[10px] sm:text-xs text-pink-400/80 font-mono tracking-widest uppercase">🧸 Husband & Wife Al-Fatiha Companion 🌸</p>
+                    <h1 class="text-xl md:text-2xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-300">OUR SACRED STUDY SANCTUARY</h1>
+                    <p class="text-xs sm:text-sm text-pink-400/80 font-mono tracking-widest uppercase">🧸 Husband & Wife Al-Fatiha Companion 🌸</p>
                 </div>
             </div>
             
             <!-- Navigation Tabs -->
-            <nav class="flex flex-wrap gap-1 bg-darkplum-950 p-1.5 rounded-xl border border-purple-950/60">
-                <button onclick="switchTab('lexicon')" id="tab-lexicon" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-bold transition-all bg-neonpink-600 text-white shadow-md">
+            <nav class="flex flex-wrap gap-2 bg-darkplum-950 p-2 rounded-2xl border border-purple-950/60 shadow-lg">
+                <button onclick="switchTab('lexicon')" id="tab-lexicon" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-bold transition-all bg-neonpink-600 text-white shadow-md">
                     📚 Lexicon
                 </button>
-                <button onclick="switchTab('meanings')" id="tab-meanings" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-purple-300 hover:text-white">
+                <button onclick="switchTab('meanings')" id="tab-meanings" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-bold transition-all text-purple-300 hover:text-white">
                     ✨ Meanings
                 </button>
-                <button onclick="switchTab('story')" id="tab-story" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-purple-300 hover:text-white">
+                <button onclick="switchTab('story')" id="tab-story" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-bold transition-all text-purple-300 hover:text-white">
                     📜 Story & Secrets
                 </button>
-                <button onclick="switchTab('recitation')" id="tab-recitation" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-purple-300 hover:text-white">
+                <button onclick="switchTab('recitation')" id="tab-recitation" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-bold transition-all text-purple-300 hover:text-white">
                     🎤 Recitation
                 </button>
-                <button onclick="switchTab('tracker')" id="tab-tracker" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-purple-300 hover:text-white">
+                <button onclick="switchTab('tracker')" id="tab-tracker" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-bold transition-all text-purple-300 hover:text-white">
                     🎯 Tracker
                 </button>
-                <button onclick="switchTab('journal')" id="tab-journal" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-purple-300 hover:text-white">
+                <button onclick="switchTab('journal')" id="tab-journal" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-bold transition-all text-purple-300 hover:text-white">
                     ☕ Journal
                 </button>
             </nav>
@@ -94,131 +95,131 @@
     </header>
 
     <!-- Main Content -->
-    <main class="flex-grow max-w-5xl w-full mx-auto p-4 md:py-8 z-10">
+    <main class="flex-grow max-w-6xl w-full mx-auto p-6 md:py-10 z-10">
 
         <!-- TAB 1: INTERACTIVE WORD-BY-WORD LEXICON -->
-        <section id="section-lexicon" class="tab-content block space-y-6">
-            <div class="bg-darkplum-900/60 border border-purple-950 rounded-2xl p-6 shadow-xl">
-                <div class="flex items-center space-x-3 mb-2">
-                    <span class="text-2xl">🧸🌸</span>
-                    <h2 class="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-300">Interactive Verse-by-Verse Lexicon</h2>
+        <section id="section-lexicon" class="tab-content block space-y-8">
+            <div class="bg-darkplum-900/60 border border-purple-950 rounded-3xl p-8 shadow-2xl">
+                <div class="flex items-center space-x-4 mb-4">
+                    <span class="text-3xl">🧸🌸</span>
+                    <h2 class="text-2xl lg:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-300">Interactive Verse-by-Verse Lexicon</h2>
                 </div>
-                <p class="text-xs text-purple-300/80 mb-6 leading-relaxed">
+                <p class="text-sm md:text-base text-purple-300/80 mb-8 leading-relaxed">
                     This interactive explorer guides us word-by-word through the entire Surah. **Click or tap** on any Arabic segment below to display its detailed grammatical breakdown safely on any device.
                 </p>
 
                 <!-- Complete Verse Navigation -->
-                <div class="space-y-6">
+                <div class="space-y-8">
                     <!-- Verse 1 -->
-                    <div class="bg-darkplum-950/80 p-5 rounded-xl border border-purple-950/40">
-                        <span class="text-[10px] font-bold text-pink-400 tracking-widest uppercase block mb-3">Verse 1 — The Opening</span>
-                        <div class="flex flex-wrap gap-2">
-                            <button onclick="showWord('Bi', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Bi</button>
-                            <button onclick="showWord('Ismi', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ismi</button>
-                            <button onclick="showWord('Ar-Rahman', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ar-Rahman</button>
-                            <button onclick="showWord('Ar-Raheem', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ar-Raheem</button>
+                    <div class="bg-darkplum-950/80 p-6 rounded-2xl border border-purple-950/40 shadow-inner">
+                        <span class="text-xs font-bold text-pink-400 tracking-widest uppercase block mb-4">Verse 1 — The Opening</span>
+                        <div class="flex flex-wrap gap-3">
+                            <button onclick="showWord('Bi', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">Bi</button>
+                            <button onclick="showWord('Ismi', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">Ismi</button>
+                            <button onclick="showWord('Ar-Rahman', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">Ar-Rahman</button>
+                            <button onclick="showWord('Ar-Raheem', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">Ar-Raheem</button>
                         </div>
                     </div>
 
                     <!-- Verse 2 -->
-                    <div class="bg-darkplum-950/80 p-5 rounded-xl border border-purple-950/40">
-                        <span class="text-[10px] font-bold text-pink-400 tracking-widest uppercase block mb-3">Verse 2 — All Praise</span>
-                        <div class="flex flex-wrap gap-2">
-                            <button onclick="showWord('Al-hamdu', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Al-hamdu</button>
-                            <button onclick="showWord('Lil-lahee', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Lil-lahee</button>
-                            <button onclick="showWord('Rabb', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Rabb</button>
-                            <button onclick="showWord('Al-Alamin', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Al-'Alamin</button>
+                    <div class="bg-darkplum-950/80 p-6 rounded-2xl border border-purple-950/40 shadow-inner">
+                        <span class="text-xs font-bold text-pink-400 tracking-widest uppercase block mb-4">Verse 2 — All Praise</span>
+                        <div class="flex flex-wrap gap-3">
+                            <button onclick="showWord('Al-hamdu', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">Al-hamdu</button>
+                            <button onclick="showWord('Lil-lahee', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">Lil-lahee</button>
+                            <button onclick="showWord('Rabb', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">Rabb</button>
+                            <button onclick="showWord('Al-Alamin', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">Al-'Alamin</button>
                         </div>
                     </div>
 
                     <!-- Verse 3 -->
-                    <div class="bg-darkplum-950/80 p-5 rounded-xl border border-purple-950/40">
-                        <span class="text-[10px] font-bold text-pink-400 tracking-widest uppercase block mb-3">Verse 3 — Attributes of Love</span>
-                        <div class="flex flex-wrap gap-2">
-                            <button onclick="showWord('Ar-Rahman', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ar-Rahman</button>
-                            <button onclick="showWord('Ar-Raheem', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ar-Raheem</button>
+                    <div class="bg-darkplum-950/80 p-6 rounded-2xl border border-purple-950/40 shadow-inner">
+                        <span class="text-xs font-bold text-pink-400 tracking-widest uppercase block mb-4">Verse 3 — Attributes of Love</span>
+                        <div class="flex flex-wrap gap-3">
+                            <button onclick="showWord('Ar-Rahman', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">Ar-Rahman</button>
+                            <button onclick="showWord('Ar-Raheem', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">Ar-Raheem</button>
                         </div>
                     </div>
 
                     <!-- Verse 4 -->
-                    <div class="bg-darkplum-950/80 p-5 rounded-xl border border-purple-950/40">
-                        <span class="text-[10px] font-bold text-pink-400 tracking-widest uppercase block mb-3">Verse 4 — Sovereignty</span>
-                        <div class="flex flex-wrap gap-2">
-                            <button onclick="showWord('Maliki', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Maliki</button>
-                            <button onclick="showWord('Yawm', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Yawm</button>
-                            <button onclick="showWord('Ad-Deen', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ad-Deen</button>
+                    <div class="bg-darkplum-950/80 p-6 rounded-2xl border border-purple-950/40 shadow-inner">
+                        <span class="text-xs font-bold text-pink-400 tracking-widest uppercase block mb-4">Verse 4 — Sovereignty</span>
+                        <div class="flex flex-wrap gap-3">
+                            <button onclick="showWord('Maliki', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">Maliki</button>
+                            <button onclick="showWord('Yawm', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">Yawm</button>
+                            <button onclick="showWord('Ad-Deen', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">Ad-Deen</button>
                         </div>
                     </div>
 
                     <!-- Verse 5 -->
-                    <div class="bg-darkplum-950/80 p-5 rounded-xl border border-purple-950/40">
-                        <span class="text-[10px] font-bold text-pink-400 tracking-widest uppercase block mb-3">Verse 5 — Covenant of worship</span>
-                        <div class="flex flex-wrap gap-2">
-                            <button onclick="showWord('Eyyaka', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Eyyāka</button>
-                            <button onclick="showWord('budu', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">budu</button>
-                            <button onclick="showWord('na', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">na</button>
-                            <button onclick="showWord('Wa', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Wa</button>
-                            <button onclick="showWord('sta-een', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">sta'een</button>
+                    <div class="bg-darkplum-950/80 p-6 rounded-2xl border border-purple-950/40 shadow-inner">
+                        <span class="text-xs font-bold text-pink-400 tracking-widest uppercase block mb-4">Verse 5 — Covenant of worship</span>
+                        <div class="flex flex-wrap gap-3">
+                            <button onclick="showWord('Eyyaka', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">Eyyāka</button>
+                            <button onclick="showWord('budu', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">budu</button>
+                            <button onclick="showWord('na', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">na</button>
+                            <button onclick="showWord('Wa', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">Wa</button>
+                            <button onclick="showWord('sta-een', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">sta'een</button>
                         </div>
                     </div>
 
                     <!-- Verse 6 -->
-                    <div class="bg-darkplum-950/80 p-5 rounded-xl border border-purple-950/40">
-                        <span class="text-[10px] font-bold text-pink-400 tracking-widest uppercase block mb-3">Verse 6 — Supplication for guidance</span>
-                        <div class="flex flex-wrap gap-2">
-                            <button onclick="showWord('Ehdee', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ehdee</button>
-                            <button onclick="showWord('Sirat', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Sirat</button>
-                            <button onclick="showWord('Mustaqeem', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Mustaqeem</button>
+                    <div class="bg-darkplum-950/80 p-6 rounded-2xl border border-purple-950/40 shadow-inner">
+                        <span class="text-xs font-bold text-pink-400 tracking-widest uppercase block mb-4">Verse 6 — Supplication for guidance</span>
+                        <div class="flex flex-wrap gap-3">
+                            <button onclick="showWord('Ehdee', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">Ehdee</button>
+                            <button onclick="showWord('Sirat', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">Sirat</button>
+                            <button onclick="showWord('Mustaqeem', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">Mustaqeem</button>
                         </div>
                     </div>
 
                     <!-- Verse 7 -->
-                    <div class="bg-darkplum-950/80 p-5 rounded-xl border border-purple-950/40">
-                        <span class="text-[10px] font-bold text-pink-400 tracking-widest uppercase block mb-3">Verse 7 — The Divided Paths</span>
-                        <div class="flex flex-wrap gap-2">
-                            <button onclick="showWord('Latheena', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Latheena</button>
-                            <button onclick="showWord('An-am', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">An'am</button>
-                            <button onclick="showWord('Ta', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ta</button>
-                            <button onclick="showWord('An-am-ta', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">An'am'ta</button>
-                            <button onclick="showWord('Alayhim', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">'Alayhim</button>
-                            <button onclick="showWord('Ghayri', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ghayri</button>
-                            <button onclick="showWord('Al-Maghdoobi', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Al-Maghdūbi</button>
-                            <button onclick="showWord('Wa', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Wa</button>
-                            <button onclick="showWord('La', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Lā</button>
-                            <button onclick="showWord('Ad-Daleen', this)" class="lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all">Ad-Daleen</button>
+                    <div class="bg-darkplum-950/80 p-6 rounded-2xl border border-purple-950/40 shadow-inner">
+                        <span class="text-xs font-bold text-pink-400 tracking-widest uppercase block mb-4">Verse 7 — The Divided Paths</span>
+                        <div class="flex flex-wrap gap-3">
+                            <button onclick="showWord('Latheena', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">Latheena</button>
+                            <button onclick="showWord('An-am', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">An'am</button>
+                            <button onclick="showWord('Ta', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">Ta</button>
+                            <button onclick="showWord('An-am-ta', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">An'am'ta</button>
+                            <button onclick="showWord('Alayhim', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">'Alayhim</button>
+                            <button onclick="showWord('Ghayri', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">Ghayri</button>
+                            <button onclick="showWord('Al-Maghdoobi', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">Al-Maghdūbi</button>
+                            <button onclick="showWord('Wa', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">Wa</button>
+                            <button onclick="showWord('La', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">Lā</button>
+                            <button onclick="showWord('Ad-Daleen', this)" class="lex-word-btn px-6 py-4 rounded-xl bg-darkplum-900 border border-purple-900/30 text-sm md:text-base lg:text-lg font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all shadow-md">Ad-Daleen</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- INTERACTIVE POPUP CARD: Opens on Tap/Click for both devices and closes gracefully -->
-            <div id="lexicon-detail-popup" class="fixed inset-0 bg-darkplum-950/75 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden" onclick="closeLexiconDetail()">
-                <div class="bg-gradient-to-r from-purple-950 to-darkplum-900 border border-pink-500/50 rounded-2xl p-6 shadow-2xl max-w-lg w-full relative overflow-hidden transform scale-95 opacity-0 transition-all duration-200 animate-none" onclick="event.stopPropagation()">
-                    <div class="absolute top-0 right-0 p-3">
-                        <button onclick="closeLexiconDetail()" class="text-purple-400 hover:text-white transition-all text-xs font-bold bg-purple-900/40 px-2.5 py-1 rounded">✕ Close</button>
+            <!-- INTERACTIVE POPUP CARD: Clicking backdrop, inner Close button, or clicking outside closes it cleanly -->
+            <div id="lexicon-detail-popup" class="fixed inset-0 bg-darkplum-950/80 backdrop-blur-md z-50 flex items-center justify-center p-6 hidden" onclick="closeLexiconDetailManual()">
+                <div class="bg-gradient-to-r from-purple-950 to-darkplum-900 border-2 border-pink-500/50 rounded-3xl p-8 md:p-10 shadow-2xl max-w-3xl w-full relative overflow-hidden transform scale-95 opacity-0 transition-all duration-200" onclick="event.stopPropagation()">
+                    <div class="absolute top-0 right-0 p-4">
+                        <button onclick="closeLexiconDetailManual()" class="text-purple-300 hover:text-white transition-all text-sm font-black bg-purple-900/60 px-4 py-2 rounded-xl border border-purple-800 shadow-md">✕ Close</button>
                     </div>
-                    <div class="space-y-4">
+                    <div class="space-y-6">
                         <div>
-                            <span class="text-[10px] uppercase font-mono tracking-widest text-pink-400">Word Analysis</span>
-                            <h3 id="detail-title" class="text-3xl font-serif font-black tracking-wide text-white mt-1">Word</h3>
-                            <p id="detail-meaning" class="text-lg font-bold text-pink-300 italic mt-1"></p>
+                            <span class="text-xs uppercase font-mono tracking-widest text-pink-400 font-bold">Word Analysis</span>
+                            <h3 id="detail-title" class="text-4xl md:text-5xl font-serif font-black tracking-wide text-white mt-2">Word</h3>
+                            <p id="detail-meaning" class="text-xl md:text-2xl font-bold text-pink-300 italic mt-2"></p>
                         </div>
-                        <div class="border-t border-purple-900/60 pt-4 space-y-3">
+                        <div class="border-t border-purple-900/60 pt-5 space-y-4">
                             <div>
-                                <h4 class="text-[10px] font-bold text-purple-400 uppercase tracking-widest">Type / Structural Classification</h4>
-                                <p id="detail-type" class="text-sm font-semibold text-white mt-0.5"></p>
+                                <h4 class="text-xs font-bold text-purple-400 uppercase tracking-widest">Type / Structural Classification</h4>
+                                <p id="detail-type" class="text-base font-bold text-white mt-1 bg-purple-900/40 px-3 py-1.5 rounded-lg border border-purple-800/40 inline-block"></p>
                             </div>
                             <div>
-                                <h4 class="text-[10px] font-bold text-purple-400 uppercase tracking-widest">Our Study Notes & Breakdown</h4>
-                                <p id="detail-breakdown" class="text-xs text-purple-200 leading-relaxed mt-1 bg-purple-950/40 p-3 rounded-lg border border-purple-900/20"></p>
+                                <h4 class="text-xs font-bold text-purple-400 uppercase tracking-widest">Our Study Notes & Breakdown</h4>
+                                <p id="detail-breakdown" class="text-sm md:text-base lg:text-lg text-purple-200 leading-relaxed mt-2 bg-purple-950/60 p-5 rounded-xl border border-purple-900/30"></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div id="lexicon-placeholder" class="p-5 text-center bg-darkplum-900/30 rounded-xl border border-purple-950/40 text-purple-400 text-xs">
-                💡 **Tap or click** on any of the Arabic word buttons above to view its detailed breakdown!
+            <div id="lexicon-placeholder" class="p-6 text-center bg-darkplum-900/30 rounded-2xl border border-purple-950/40 text-purple-400 text-sm">
+                💡 **Click or tap** on any of the Arabic word buttons above to view its detailed breakdown!
             </div>
         </section>
 
@@ -229,99 +230,99 @@
                     <span class="text-2xl">✨</span>
                     <h2 class="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-300">Spiritual Translations & Meaning Deep-Dives</h2>
                 </div>
-                <p class="text-xs text-purple-300/80 leading-relaxed">
+                <p class="text-sm text-purple-300/80 leading-relaxed">
                     Surah Al-Fatiha is not just words—it's a spiritual dialogue between us and Allah. Here is the complete flow, connecting literal translation with deeper heart-felt lessons.
                 </p>
 
                 <!-- Verse Cards with Tafsir -->
-                <div class="space-y-4">
+                <div class="space-y-6">
                     <!-- Card 1 -->
-                    <div class="bg-darkplum-950/70 border border-purple-950/80 p-5 rounded-xl hover:border-pink-500/20 transition-all space-y-2">
+                    <div class="bg-darkplum-950/70 border border-purple-950/80 p-6 rounded-2xl hover:border-pink-500/20 transition-all space-y-3 shadow-md">
                         <div class="flex justify-between items-center">
-                            <span class="text-[10px] font-extrabold text-pink-400 font-mono tracking-widest uppercase">Verse 1</span>
-                            <span class="text-[10px] bg-purple-900/50 text-purple-300 px-2 py-0.5 rounded-full font-bold">The Foundation</span>
+                            <span class="text-xs font-extrabold text-pink-400 font-mono tracking-widest uppercase">Verse 1</span>
+                            <span class="text-xs bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full font-bold">The Foundation</span>
                         </div>
-                        <h4 class="text-lg font-bold text-white">Bi-Ismi Ar-Rahman Ar-Raheem</h4>
-                        <p class="text-sm text-pink-300/90 font-medium italic">"In the Name of Allah, the Most Merciful, the Most Gracious"</p>
-                        <p class="text-xs text-purple-200/80 leading-relaxed pt-2 border-t border-purple-950/40">
+                        <h4 class="text-xl font-bold text-white">Bi-Ismi Ar-Rahman Ar-Raheem</h4>
+                        <p class="text-base text-pink-300/90 font-medium italic">"In the Name of Allah, the Most Merciful, the Most Gracious"</p>
+                        <p class="text-sm md:text-base text-purple-200/95 leading-relaxed pt-3 border-t border-purple-950/40">
                             <strong>Heart Reflection:</strong> We begin everything in His Name to seek blessings. In our notes, we emphasize that <em>Ar-Rahman</em> is His sweeping, infinite mercy for everyone, and <em>Ar-Raheem</em> is His intimate grace specifically tailored to guide us.
                         </p>
                     </div>
 
                     <!-- Card 2 -->
-                    <div class="bg-darkplum-950/70 border border-purple-950/80 p-5 rounded-xl hover:border-pink-500/20 transition-all space-y-2">
+                    <div class="bg-darkplum-950/70 border border-purple-950/80 p-6 rounded-2xl hover:border-pink-500/20 transition-all space-y-3 shadow-md">
                         <div class="flex justify-between items-center">
-                            <span class="text-[10px] font-extrabold text-pink-400 font-mono tracking-widest uppercase">Verse 2</span>
-                            <span class="text-[10px] bg-purple-900/50 text-purple-300 px-2 py-0.5 rounded-full font-bold">The Gratitude</span>
+                            <span class="text-xs font-extrabold text-pink-400 font-mono tracking-widest uppercase">Verse 2</span>
+                            <span class="text-xs bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full font-bold">The Gratitude</span>
                         </div>
-                        <h4 class="text-lg font-bold text-white">Al-hamdu Lil-lahee Rabb Al-'Alamin</h4>
+                        <h4 class="text-xl font-bold text-white">Al-hamdu Lil-lahee Rabb Al-'Alamin</h4>
                         <p class="text-sm text-pink-300/90 font-medium italic">"All praise belongs to Allah, Lord of the worlds (all creations)"</p>
-                        <p class="text-xs text-purple-200/80 leading-relaxed pt-2 border-t border-purple-950/40">
+                        <p class="text-sm md:text-base text-purple-200/95 leading-relaxed pt-3 border-t border-purple-950/40">
                             <strong>Heart Reflection:</strong> "Al-hamdu" represents total praise accompanied by love and deep gratitude. He is the "Rabb"—the Sustainer who grows, protects, and lovingly shapes all of creation from inception to completion.
                         </p>
                     </div>
 
                     <!-- Card 3 -->
-                    <div class="bg-darkplum-950/70 border border-purple-950/80 p-5 rounded-xl hover:border-pink-500/20 transition-all space-y-2">
+                    <div class="bg-darkplum-950/70 border border-purple-950/80 p-6 rounded-2xl hover:border-pink-500/20 transition-all space-y-3 shadow-md">
                         <div class="flex justify-between items-center">
-                            <span class="text-[10px] font-extrabold text-pink-400 font-mono tracking-widest uppercase">Verse 3</span>
-                            <span class="text-[10px] bg-purple-900/50 text-purple-300 px-2 py-0.5 rounded-full font-bold">The Mercy</span>
+                            <span class="text-xs font-extrabold text-pink-400 font-mono tracking-widest uppercase">Verse 3</span>
+                            <span class="text-xs bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full font-bold">The Mercy</span>
                         </div>
-                        <h4 class="text-lg font-bold text-white">Ar-Rahman Ar-Raheem</h4>
+                        <h4 class="text-xl font-bold text-white">Ar-Rahman Ar-Raheem</h4>
                         <p class="text-sm text-pink-300/90 font-medium italic">"The Most Merciful, the Most Gracious"</p>
-                        <p class="text-xs text-purple-200/80 leading-relaxed pt-2 border-t border-purple-950/40">
+                        <p class="text-sm md:text-base text-purple-200/95 leading-relaxed pt-3 border-t border-purple-950/40">
                             <strong>Heart Reflection:</strong> Repeated immediately to remind us that His authority and sovereignty are entirely rooted in overflowing mercy. He wants us to come to Him out of love, not fear.
                         </p>
                     </div>
 
                     <!-- Card 4 -->
-                    <div class="bg-darkplum-950/70 border border-purple-950/80 p-5 rounded-xl hover:border-pink-500/20 transition-all space-y-2">
+                    <div class="bg-darkplum-950/70 border border-purple-950/80 p-6 rounded-2xl hover:border-pink-500/20 transition-all space-y-3 shadow-md">
                         <div class="flex justify-between items-center">
-                            <span class="text-[10px] font-extrabold text-pink-400 font-mono tracking-widest uppercase">Verse 4</span>
-                            <span class="text-[10px] bg-purple-900/50 text-purple-300 px-2 py-0.5 rounded-full font-bold">The Sovereignty</span>
+                            <span class="text-xs font-extrabold text-pink-400 font-mono tracking-widest uppercase">Verse 4</span>
+                            <span class="text-xs bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full font-bold">The Sovereignty</span>
                         </div>
-                        <h4 class="text-lg font-bold text-white">Maliki Yawm Ad-Deen</h4>
+                        <h4 class="text-xl font-bold text-white">Maliki Yawm Ad-Deen</h4>
                         <p class="text-sm text-pink-300/90 font-medium italic">"Master of the Day of Judgment"</p>
-                        <p class="text-xs text-purple-200/80 leading-relaxed pt-2 border-t border-purple-950/40">
+                        <p class="text-sm md:text-base text-purple-200/95 leading-relaxed pt-3 border-t border-purple-950/40">
                             <strong>Heart Reflection:</strong> Gives us perspective on ultimate accountability. On the Day of Judgment, all worldly titles fade away and only His sovereignty and our sincere deeds remain.
                         </p>
                     </div>
 
                     <!-- Card 5 -->
-                    <div class="bg-darkplum-950/70 border border-purple-950/80 p-5 rounded-xl hover:border-pink-500/20 transition-all space-y-2">
+                    <div class="bg-darkplum-950/70 border border-purple-950/80 p-6 rounded-2xl hover:border-pink-500/20 transition-all space-y-3 shadow-md">
                         <div class="flex justify-between items-center">
-                            <span class="text-[10px] font-extrabold text-pink-400 font-mono tracking-widest uppercase">Verse 5</span>
-                            <span class="text-[10px] bg-purple-900/50 text-purple-300 px-2 py-0.5 rounded-full font-bold">The Covenant</span>
+                            <span class="text-xs font-extrabold text-pink-400 font-mono tracking-widest uppercase">Verse 5</span>
+                            <span class="text-xs bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full font-bold">The Covenant</span>
                         </div>
-                        <h4 class="text-lg font-bold text-white">Eyyāka na'budu wa eyyāka nasta'een</h4>
+                        <h4 class="text-xl font-bold text-white">Eyyāka na'budu wa eyyāka nasta'een</h4>
                         <p class="text-sm text-pink-300/90 font-medium italic">"You alone we worship and You alone we seek help"</p>
-                        <p class="text-xs text-purple-200/80 leading-relaxed pt-2 border-t border-purple-950/40">
+                        <p class="text-sm md:text-base text-purple-200/95 leading-relaxed pt-3 border-t border-purple-950/40">
                             <strong>Heart Reflection:</strong> This is the turning point of the Surah. We state our exclusivity to Him. We worship first (na'budu) and then ask for help (nasta'een), realizing we can't even worship Him without His divine help.
                         </p>
                     </div>
 
                     <!-- Card 6 -->
-                    <div class="bg-darkplum-950/70 border border-purple-950/80 p-5 rounded-xl hover:border-pink-500/20 transition-all space-y-2">
+                    <div class="bg-darkplum-950/70 border border-purple-950/80 p-6 rounded-2xl hover:border-pink-500/20 transition-all space-y-3 shadow-md">
                         <div class="flex justify-between items-center">
-                            <span class="text-[10px] font-extrabold text-pink-400 font-mono tracking-widest uppercase">Verse 6</span>
-                            <span class="text-[10px] bg-purple-900/50 text-purple-300 px-2 py-0.5 rounded-full font-bold">The Request</span>
+                            <span class="text-xs font-extrabold text-pink-400 font-mono tracking-widest uppercase">Verse 6</span>
+                            <span class="text-xs bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full font-bold">The Request</span>
                         </div>
-                        <h4 class="text-lg font-bold text-white">Ehdina Sirat Al-Mustaqeem</h4>
+                        <h4 class="text-xl font-bold text-white">Ehdina Sirat Al-Mustaqeem</h4>
                         <p class="text-sm text-pink-300/90 font-medium italic">"Guide us to the straight path"</p>
-                        <p class="text-xs text-purple-200/80 leading-relaxed pt-2 border-t border-purple-950/40">
+                        <p class="text-sm md:text-base text-purple-200/95 leading-relaxed pt-3 border-t border-purple-950/40">
                             <strong>Heart Reflection:</strong> The ultimate prayer. Out of all the things in the universe we could ask for, we ask for guidance. The straight path is the shortest, clearest distance to His pleasure.
                         </p>
                     </div>
 
                     <!-- Card 7 -->
-                    <div class="bg-darkplum-950/70 border border-purple-950/80 p-5 rounded-xl hover:border-pink-500/20 transition-all space-y-2">
+                    <div class="bg-darkplum-950/70 border border-purple-950/80 p-6 rounded-2xl hover:border-pink-500/20 transition-all space-y-3 shadow-md">
                         <div class="flex justify-between items-center">
-                            <span class="text-[10px] font-extrabold text-pink-400 font-mono tracking-widest uppercase">Verse 7</span>
-                            <span class="text-[10px] bg-purple-900/50 text-purple-300 px-2 py-0.5 rounded-full font-bold">The Destination</span>
+                            <span class="text-xs font-extrabold text-pink-400 font-mono tracking-widest uppercase">Verse 7</span>
+                            <span class="text-xs bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full font-bold">The Destination</span>
                         </div>
-                        <h4 class="text-lg font-bold text-white">Sirat Al-Latheena an'amta 'alayhim ghayril-maghdoobi 'alayhim walad-daleen</h4>
+                        <h4 class="text-xl font-bold text-white">Sirat Al-Latheena an'amta 'alayhim ghayril-maghdoobi 'alayhim walad-daleen</h4>
                         <p class="text-sm text-pink-300/90 font-medium italic">"The path of those whom You bestowed blessings upon them, not of those who earned anger upon them, and not of those who went astray"</p>
-                        <p class="text-xs text-purple-200/80 leading-relaxed pt-2 border-t border-purple-950/40">
+                        <p class="text-sm md:text-base text-purple-200/95 leading-relaxed pt-3 border-t border-purple-950/40">
                             <strong>Heart Reflection:</strong> We ask to be with those who received His gifts and stayed upright. We pray to avoid those who knew the truth but acted against it (earning anger), and those who acted without knowledge (going astray).
                         </p>
                     </div>
@@ -360,7 +361,7 @@
                 </div>
 
                 <!-- Section 2: Names of the Surah -->
-                <div class="bg-darkplum-950/80 border border-purple-950/40 p-5 rounded-xl space-y-3">
+                <div class="bg-darkplum-950/80 p-5 rounded-xl border border-purple-950/40 space-y-3">
                     <div class="flex items-center space-x-2 text-pink-400 font-bold text-sm">
                         <span class="p-1 bg-pink-950/50 rounded-lg">🏷️</span>
                         <span>Names of the Surah and Their Meanings</span>
@@ -373,7 +374,7 @@
                 </div>
 
                 <!-- Section 3: The Scorpion Cure Story -->
-                <div class="bg-darkplum-950/80 border border-purple-950/40 p-5 rounded-xl space-y-3">
+                <div class="bg-darkplum-950/80 p-5 rounded-xl border border-purple-950/40 space-y-3">
                     <div class="flex items-center space-x-2 text-pink-400 font-bold text-sm">
                         <span class="p-1 bg-pink-950/50 rounded-lg">🦂</span>
                         <span>The Miracle Story: The Scorpion Sting Cure</span>
@@ -400,7 +401,7 @@
                 </p>
 
                 <!-- VISUAL THROAT ARTICULATION MAP -->
-                <div class="bg-darkplum-950/80 border border-purple-900/40 p-5 rounded-xl space-y-4">
+                <div class="bg-darkplum-950/80 border border-purple-900/40 p-5 rounded-xl space-y-4 font-sans">
                     <h3 class="text-xs font-black text-pink-400 tracking-wider uppercase flex items-center gap-1.5">
                         <span>🗣️</span> The Throat Letters (Al-Huroof Al-Halqiyyah) Map
                     </h3>
@@ -444,7 +445,7 @@
                         These are two of the hardest sounds to master because they originate very close together, but use completely different muscle mechanics:
                     </p>
                     
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-sans">
                         <!-- 'Ayn ع -->
                         <div class="bg-darkplum-900/70 p-4 rounded-xl border border-purple-900/30 space-y-2">
                             <span class="text-xs font-extrabold text-pink-400 flex items-center gap-1">
@@ -602,7 +603,7 @@
                                 <input type="checkbox" onchange="updateWifeProgress()" class="wife-check w-4 h-4 rounded text-pink-600 bg-darkplum-900 border-purple-900 focus:ring-0 focus:ring-offset-0">
                                 <span class="text-xs font-bold text-purple-200">Verses 5-6 Memorized</span>
                             </label>
-                            <label class="flex items-center space-x-3 p-3 bg-darkplum-950/50 border border-purple-750 rounded-lg cursor-pointer hover:border-pink-500/20 transition-all select-none">
+                            <label class="flex items-center space-x-3 p-3 bg-darkplum-950/50 border border-purple-950 rounded-lg cursor-pointer hover:border-pink-500/20 transition-all select-none">
                                 <input type="checkbox" onchange="updateWifeProgress()" class="wife-check w-4 h-4 rounded text-pink-600 bg-darkplum-900 border-purple-700 focus:ring-0">
                                 <span class="text-xs font-bold text-purple-200">Verse 7 Memorized</span>
                             </label>
@@ -895,23 +896,23 @@
                 innerCard.classList.add('scale-100', 'opacity-100');
             }, 10);
 
-            // Highlight the active button cleanly
+            // Manage button highlighting cleanly using classList
             document.querySelectorAll('.lex-word-btn').forEach(btn => {
-                btn.className = "lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all";
+                btn.classList.remove('border-pink-500', 'bg-pink-950/40', 'text-pink-300', 'shadow-pink-500/10');
             });
             
             // Highlight the specifically clicked button element cleanly
             if (btnElement) {
-                btnElement.className = "lex-word-btn px-3.5 py-2 rounded-lg bg-pink-950/40 border border-pink-500 text-pink-300 text-xs font-bold transition-all shadow-md shadow-pink-500/10";
+                btnElement.classList.add('border-pink-500', 'bg-pink-950/40', 'text-pink-300', 'shadow-pink-500/10');
             }
         }
 
-        // Hover-close disabled to keep things fully stable on laptops
+        // Auto close function is deactivated to prevent laptop hover stutter
         function closeLexiconDetail() {
-            // No action needed here to prevent flickering. Close is handled cleanly by clicks!
+            // Handled exclusively by clicking off the popup or clicking manual close to maintain ultimate stability!
         }
 
-        // Manual Close trigger (via Close button or Backdrop tap)
+        // Manual Close trigger (Called when close button or backdrop wrapper is clicked)
         function closeLexiconDetailManual() {
             hidePopup();
         }
@@ -926,7 +927,7 @@
             setTimeout(() => {
                 popupWrapper.classList.add('hidden');
                 document.querySelectorAll('.lex-word-btn').forEach(btn => {
-                    btn.className = "lex-word-btn px-3.5 py-2 rounded-lg bg-darkplum-900 border border-purple-900/30 text-xs font-bold hover:border-pink-500 hover:bg-pink-950/20 transition-all";
+                    btn.classList.remove('border-pink-500', 'bg-pink-950/40', 'text-pink-300', 'shadow-pink-500/10');
                 });
             }, 150);
         }
@@ -959,6 +960,7 @@
             localStorage.setItem('wife_progress_checks', JSON.stringify(Array.from(checks).map(c => c.checked)));
         }
 
+        // Reset Tracker
         function resetTracker() {
             document.querySelectorAll('.husband-check').forEach(c => c.checked = false);
             document.querySelectorAll('.wife-check').forEach(c => c.checked = false);
@@ -997,7 +999,6 @@
             setTimeout(() => { toast.classList.add('hidden'); }, 3000);
         }
 
-        // Clear Reflections
         function clearJournalNotes() {
             document.getElementById('husband-notes').value = '';
             document.getElementById('wife-notes').value = '';
